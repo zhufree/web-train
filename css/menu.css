@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+ul {
+  list-style: none; }
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none; }
+
+.drop-menu {
+  width: 200px;
+  float: left;
+  background-color: #ccc; }
+  .drop-menu span {
+    display: block;
+    width: 100%; }
+  .drop-menu ul {
+    display: none;
+    background-color: #bbb; }
+  .drop-menu li {
+    border-bottom: 1px #fff solid;
+    text-align: center; }
+
+#drop-menu1 ul {
+  position: absolute;
+  width: 200px; }
+
+#drop-menu2 {
+  margin-left: 200px; }
+  #drop-menu2 ul {
+    width: 100%; }
+
+/*# sourceMappingURL=menu.css.map */

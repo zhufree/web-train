@@ -1,3 +1,9 @@
+//nav
+@mixin navstyle($height, $color){
+    height: $height;
+    background-color: $color;
+}
+
 //yuan xing tou xiang
 @mixin circlehead($radius) {
     height: $radius;

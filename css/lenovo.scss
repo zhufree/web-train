@@ -1,0 +1,234 @@
+@import 'lenovo-variable';
+@import 'mixins';
+
+body {
+	font-size:$fz-2;
+}
+
+nav {
+	@include navstyle(38px, $black);
+	padding: 0 30px;
+	color: $white;
+	a {
+		line-height: 38px;
+		vertical-align: middle;
+		color: $white;
+		font-size: $fz-2;
+		padding: 0 10px;
+		border-right: 1px $white solid;
+	}
+	.no-right-bar {
+		border-right: none;
+	}
+	.right {
+		float: right;
+	}
+	span {
+		background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -185px -201px no-repeat;
+		height: 19px;
+		width: 19px;
+		font-size: $fz-1;
+		position:absolute;
+		margin: 6px -8px;
+		text-align: center;
+	}
+}
+
+.container {
+	width: 1200px;
+	margin: 30px auto;
+}
+
+.search-box {
+	height: 50px;
+	div {
+		background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -4px -363px no-repeat;
+	    width: 189px;
+	    height: 37px;
+    	float: left;
+	}
+	div a {
+		font-size: $fz-1;
+		color: transparent;
+	}
+	input {
+		float: right;
+		height: 37px;
+		width: 630px;
+		padding: 10px;
+		border: 1px $black solid;
+	}
+	.btn {
+		// position: absolute;
+		float: right;
+		width: 61px;
+		height: 37px;
+		background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/76/CmBZEFZWvNiAUa4zAAAGUlPCg-4527.jpg);
+	}
+}
+
+.tabs {
+	height: 50px;
+	text-align: center;
+	a {
+		font-size: $fz-4;
+		color: $black;
+		padding-right: 45px;
+		line-height: 50px;
+		vertical-align: middle;
+	}
+	span {
+		width: 332px;
+		height: 21px;
+		position: absolute;
+		margin: 3px -50px;
+		background-image: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png);
+		background-repeat: no-repeat;
+	}
+	#new{
+		background-position: -275px -198px;
+	}
+	#hot {
+		background-position: -268px -3px;
+	}
+}
+
+.left-bar {
+	float: left;
+	border: $gray-2 1px solid;
+	height: 365px;
+	width: 190px;
+	li {
+		font-size: $fz-4;
+		line-height: 45.6px;
+		padding: 0 20px;
+		vertical-align: middle;
+		border-bottom: $gray-2 1px solid;
+	}
+	li a {
+		color: $black;
+	}
+	.no-bot-bdr {
+		border:none;
+	}
+}
+
+.center {
+	overflow: hidden;
+	margin: 0;
+	padding: 0 10px;
+}
+
+.right-bar {
+	float: right;
+	border: $gray-2 1px solid;
+	height: 365px;
+	width: 220px;
+	#broadcast {
+		font-size: $fz-1;
+		padding: 3px 10px;
+		height: 60px;
+		border-bottom: $gray-2 1px solid;
+	}
+	#horn {
+		height: 13px;
+		width: 16px;
+		position: absolute;
+		background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -299px -320px;
+	}
+	#discuss {
+		font-size: $fz-4;
+		line-height: 37px;
+		vertical-align: middle;
+		padding-left: 10px;
+		border-bottom: $gray-2 1px dashed;
+	}
+	#discuss a {
+		color: $black;
+		font-size: $fz-1;
+		float: right;
+	}
+
+}
+
+#titles {
+	padding: 10px 5px;
+	a {
+		color: $black;
+		font-size: $fz-1;
+		line-height: 3em;
+		vertical-align: middle;
+	}
+}
+
+#recommend {
+	float: left;
+}
+
+.type a{
+	color: $black;
+}
+.slogan a {
+	color: $gray-3;
+}
+.price {
+	color: red;
+	font-size: $fz-1;
+}
+
+.star, .guess {
+	margin: 20px 0;
+	p:first-child  {
+		font-size: $fz-5;
+		line-height: 2em;
+	}
+	ul {
+		display: block;
+		margin-top: 20px;
+	}
+	ul li {
+		width: 200px;
+		float: left;
+		border: $gray-2 1px solid;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	img {
+		width: 180px;
+		height: 180px;
+		margin: 0 auto;
+	}
+	a {
+		font-size: $fz-1;
+	}
+	li p {
+		line-height: 20px;
+	}
+}
+
+.shop-box {
+	// background-color: $gray-2;
+	p:first-child {
+		font-size: $fz-5;
+		line-height: 2em;
+	}
+	.brand {
+		float: left;
+	}
+	ul {
+		display: block;
+	}
+	ul li {
+		width: 240px;
+		height: 267px;
+		float: left;
+		border: $gray-2 1px solid;
+		text-align: center;
+	}
+	a {
+		font-size: $fz-1;
+	}
+	li p {
+		line-height: 20px;
+	}
+}

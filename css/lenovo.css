@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+ul {
+  list-style: none; }
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none; }
+
+body {
+  font-size: 13px; }
+
+nav {
+  height: 38px;
+  background-color: #000;
+  padding: 0 30px;
+  color: #fff; }
+  nav a {
+    line-height: 38px;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 13px;
+    padding: 0 10px;
+    border-right: 1px #fff solid; }
+  nav .no-right-bar {
+    border-right: none; }
+  nav .right {
+    float: right; }
+  nav span {
+    background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -185px -201px no-repeat;
+    height: 19px;
+    width: 19px;
+    font-size: 12px;
+    position: absolute;
+    margin: 6px -8px;
+    text-align: center; }
+
+.container {
+  width: 1200px;
+  margin: 30px auto; }
+
+.search-box {
+  height: 50px; }
+  .search-box div {
+    background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -4px -363px no-repeat;
+    width: 189px;
+    height: 37px;
+    float: left; }
+  .search-box div a {
+    font-size: 12px;
+    color: transparent; }
+  .search-box input {
+    float: right;
+    height: 37px;
+    width: 630px;
+    padding: 10px;
+    border: 1px #000 solid; }
+  .search-box .btn {
+    float: right;
+    width: 61px;
+    height: 37px;
+    background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/76/CmBZEFZWvNiAUa4zAAAGUlPCg-4527.jpg); }
+
+.tabs {
+  height: 50px;
+  text-align: center; }
+  .tabs a {
+    font-size: 17px;
+    color: #000;
+    padding-right: 45px;
+    line-height: 50px;
+    vertical-align: middle; }
+  .tabs span {
+    width: 332px;
+    height: 21px;
+    position: absolute;
+    margin: 3px -50px;
+    background-image: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png);
+    background-repeat: no-repeat; }
+  .tabs #new {
+    background-position: -275px -198px; }
+  .tabs #hot {
+    background-position: -268px -3px; }
+
+.left-bar {
+  float: left;
+  border: #EEEEEE 1px solid;
+  height: 365px;
+  width: 190px; }
+  .left-bar li {
+    font-size: 17px;
+    line-height: 45.6px;
+    padding: 0 20px;
+    vertical-align: middle;
+    border-bottom: #EEEEEE 1px solid; }
+  .left-bar li a {
+    color: #000; }
+  .left-bar .no-bot-bdr {
+    border: none; }
+
+.center {
+  overflow: hidden;
+  margin: 0;
+  padding: 0 10px; }
+
+.right-bar {
+  float: right;
+  border: #EEEEEE 1px solid;
+  height: 365px;
+  width: 220px; }
+  .right-bar #broadcast {
+    font-size: 12px;
+    padding: 3px 10px;
+    height: 60px;
+    border-bottom: #EEEEEE 1px solid; }
+  .right-bar #horn {
+    height: 13px;
+    width: 16px;
+    position: absolute;
+    background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -299px -320px; }
+  .right-bar #discuss {
+    font-size: 17px;
+    line-height: 37px;
+    vertical-align: middle;
+    padding-left: 10px;
+    border-bottom: #EEEEEE 1px dashed; }
+  .right-bar #discuss a {
+    color: #000;
+    font-size: 12px;
+    float: right; }
+
+#titles {
+  padding: 10px 5px; }
+  #titles a {
+    color: #000;
+    font-size: 12px;
+    line-height: 3em;
+    vertical-align: middle; }
+
+#recommend {
+  float: left; }
+
+.type a {
+  color: #000; }
+
+.slogan a {
+  color: #bdbdbd; }
+
+.price {
+  color: red;
+  font-size: 12px; }
+
+.star, .guess {
+  margin: 20px 0; }
+  .star p:first-child, .guess p:first-child {
+    font-size: 20px;
+    line-height: 2em; }
+  .star ul, .guess ul {
+    display: block;
+    margin-top: 20px; }
+  .star ul li, .guess ul li {
+    width: 200px;
+    float: left;
+    border: #EEEEEE 1px solid;
+    text-align: center;
+    margin-bottom: 40px; }
+  .star img, .guess img {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto; }
+  .star a, .guess a {
+    font-size: 12px; }
+  .star li p, .guess li p {
+    line-height: 20px; }
+
+.shop-box p:first-child {
+  font-size: 20px;
+  line-height: 2em; }
+.shop-box .brand {
+  float: left; }
+.shop-box ul {
+  display: block; }
+.shop-box ul li {
+  width: 240px;
+  height: 267px;
+  float: left;
+  border: #EEEEEE 1px solid;
+  text-align: center; }
+.shop-box a {
+  font-size: 12px; }
+.shop-box li p {
+  line-height: 20px; }
+
+/*# sourceMappingURL=lenovo.css.map */
