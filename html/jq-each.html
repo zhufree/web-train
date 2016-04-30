@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jq-each</title>
+</head>
+<body>
+	<p>each() 方法规定为每个匹配元素规定运行的函数。返回 false 可用于及早停止循环。</p>
+	<ul id="one" class="level-1">
+      <li class="item-i">I</li>
+      <li id="ii" class="item-ii">II
+      <ul class="level-2">
+        <li class="item-a">A</li>
+        <li class="item-b">B
+          <ul class="level-3">
+            <li class="item-1">1</li>
+            <li class="item-2">2</li>
+            <li class="item-3">3</li>
+          </ul>
+        </li>
+        <li class="item-c">C</li>
+      </ul>
+      </li>
+      <li class="item-iii">III</li>
+    </ul>
+    <button class="btn">Click</button>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script>
+$(function() {
+    $(document).on('click', '.btn', function(event) {
+        event.preventDefault();
+        $('.level-3').children().each(function(index, el) {
+        	console.log(index + ':' + el.innerText);
+        });		
+    });        
+})
+</script>
+</html>

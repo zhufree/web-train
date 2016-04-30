@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>jq-andSelf</title>
+    <title>jq-children</title>
 </head>
 <body>
     <ul class="level-1">
@@ -25,5 +25,11 @@
     <button>click:level2-children</button>
 </body>
 <script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
-<script src="../js/jq-children.js"></script>
+<script>
+$(function(){
+  $(document).on('click', 'button', function(){
+    $('ul.level-2').children().css('background-color', 'red');
+  });
+});
+</script>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq-closest</title>
+</head>
+<body>
+    <p>closest() 方法获得匹配选择器的第一个祖先元素，从当前元素开始沿 DOM 树向上。</p>
+    <p>从当前元素开始,沿 DOM树向上遍历，直到找到已应用选择器的一个匹配为止。返回包含零个或一个元素的 jQuery 对象</p>
+    <ul id="one" class="level-1">
+      <li class="item-i">I</li>
+      <li id="ii" class="item-ii">II
+      <ul class="level-2">
+        <li class="item-a">A</li>
+        <li class="item-b">B
+          <ul class="level-3">
+            <li class="item-1">1</li>
+            <li class="item-2">2</li>
+            <li class="item-3">3</li>
+          </ul>
+        </li>
+        <li class="item-c">C</li>
+      </ul>
+      </li>
+      <li class="item-iii">III</li>
+    </ul>
+    <button id="btn-1">Click(item-a->ul)</button>
+    <button id="btn-2">Click(item-a->li)</button>
+    <button id="btn-3">Click(ul in II)</button>
+    <button id="btn-4">Click(.level-2 in II)</button>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script>
+$(function(){
+    var listItemII = document.getElementById('ii');
+    $(document).on('click', '#btn-1', function(event) {
+        event.preventDefault();
+        $('li.item-a').closest('ul').css('background-color', 'red');
+    }).on('click', '#btn-2', function(event) {
+        event.preventDefault();
+        $('li.item-a').closest('li').css('background-color', 'red');
+    }).on('click', '#btn-3', function(event) {
+        event.preventDefault();
+        $('li.item-a').closest('ul', listItemII).css('background-color', 'red');
+    }).on('click', '#btn-4', function(event) {
+        event.preventDefault();
+        $('li.item-a').closest('.level-2', listItemII).css('background-color', 'green');
+    });
+});
+</script>
+</html>

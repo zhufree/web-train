@@ -6,7 +6,7 @@ table {
 caption {
     padding-top: $table-cell-padding;
     padding-bottom: $table-cell-padding;
-    // color: $text-muted;
+    color: $text-muted;
     text-align: left;
 }
 th {
@@ -124,20 +124,20 @@ table {
 }
 
 //Table backgrounds
-// @include table-row-variant('active', $table-bg-active);
-// @include table-row-variant('success', $table-success-bg);
-// @include table-row-variant('info', $table-info-bg);
-// @include table-row-variant('warning', $table-warning-bg);
-// @include table-row-variant('danger', $table-danger-bg);
+@include table-row-variant('active', $table-bg-active);
+@include table-row-variant('success', $table-success-bg);
+@include table-row-variant('info', $table-info-bg);
+@include table-row-variant('warning', $table-warning-bg);
+@include table-row-variant('danger', $table-danger-bg);
 
 //Responsive tables
 .table-responsive {
     overflow-x: auto;
     min-height: 0.01%;
 
-    @media screen /*and (max-width: $screen-xs-max)*/ {
+    @media screen and (max-width: $screen-xs-max) {
         width: 100%;
-        // margin-bottom: ($line-height-computed * 0.75);
+        margin-bottom: ($line-height-computed * 0.75);
         overflow-y: hidden;
         -ms-overflow-style: -ms-autohiding-scrollbar;
         border: 1px solid $table-border-color;
