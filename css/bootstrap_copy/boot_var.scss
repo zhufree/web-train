@@ -1,0 +1,133 @@
+$bootstarp-sass-asset-helper: false !default;
+
+//Variables变量
+
+//Colors颜色
+//Gray and brand colors for use across Boostrap.
+
+$gray-base: #000 !default; //基础色（黑色）
+//在黑色基础上调用lighten函数提高亮度
+$gray-darker: lighten($gray-base, 13.5%) !default; //更深的灰色
+$gray-dark: lighten($gray-base, 20%) !default; //深灰色
+$gray: lighten($gray-base, 33.5%) !default; //灰色
+$gray-light: lighten($gray-base, 46.7%) !default; //亮灰色
+$gray-lighter: lighten($gray-base, 93.5%) !default; //更亮的灰色
+
+$brand-primary: darken(#428bca, 6.5%) !default; //基本颜色（蓝）
+$brand-success: #5cb85c !default; //表示成功的颜色（绿）
+$brand-info: #5bc0de !default; //表示显示信息的颜色（淡蓝）
+$brand-warning: #f0ad4e !default; //警告色 （橙色）
+$brand-danger: #d9534f !default; //表示危险的颜色（红色）
+
+$body-bg: #fff !default; //body的背景色
+
+$text-color: $gray-dark !default; //默认的字体颜色（深灰色）
+
+$link-color: $brand-primary !default; //链接颜色
+$link-hover-color: darken($link-color, 15%) !default; //hover状态的链接颜色
+$link-hover-decoration: underline !default; //hover状态的链接装饰（下划线）
+
+//默认字体族
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default; //无衬线字体
+$font-family-serif: Georgia, "Time New Roma", Times, serif !default; //有衬线字体
+//等宽字体for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default; //等宽字体
+$font-family-base: $font-family-sans-serif !default; //默认字体
+
+$font-size-base: 14px !default; //默认字体大小
+//运用ceil和floor运算
+$font-size-large: ceil(($font-size-base * 1.25)) !default; //~18px
+$font-size-small: ceil(($font-size-base * 0.85)) !default; //~12px
+//标题字体大小
+$font-size-h1: floor(($font-size-base * 2.6)) !default; //~36px
+$font-size-h2: floor(($font-size-base * 2.15)) !default; //~30px
+$font-size-h3: ceil(($font-size-base * 1.7)) !default; //~24px
+$font-size-h4: ceil(($font-size-base * 1.25)) !default; //~18px
+$font-size-h5: $font-size-base !default;
+$font-size-h6: ceil(($font-size-base * 0.85)) !default; //~12px
+
+//行高，用于button之类的组件
+$line-height-base: 1.428571429 !default; // 20/14，默认行高
+$line-height-computed: floor(($font-size-base * $line-height-base)), !default; //~20
+
+//？？？
+$heading-font-family: inherit !default; //继承自body
+$heading-font-weight: 500 !default; //字体粗度
+$heading-line-height: 1.1 !default; //默认行高
+$heading-color: inherit !default; //默认颜色
+
+//图标字体
+$icon-font-path: if($bootstarp-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/") !default; //图标字体路径
+$icon-font-name: "glyphicons-halfing-regular" !default; //字体文件名字
+$icon-font-svg-id: "glyphicons_halfingregular" !default;
+
+//组件
+//基础padding
+$padding-base-vertical: 6px !default; 
+$padding-base-horizontal: 12px !default;
+//大一些的padding
+$padding-large-vertical: 10px !default;
+$padding-large-horizontal: 16px !default;
+//小一点的padding
+$padding-small-vertical: 5px !default;
+$padding-small-horizontal: 10px !default;
+//更小的padding
+$padding-xs-vertical: 1px !default;
+$padding-xs-horizontal: 5px !default;
+
+$line-height-large: 1.3333333 !default; //大一点的行高
+$line-height-small: 1.5 !default; //小一点的行高
+//边框圆角半径
+$border-radius-base: 4px !default;
+$border-radius-large: 6px !default;
+$border-radius-small: 3px !default;
+//组件激活状态的颜色
+$component-active-color: #fff !default; //颜色
+$component-active-bg: $brand-primary !default; //背景色
+//什么什么的宽度
+$cater-width-base: 4px !default;
+$cater-width-large: 5px !default;
+
+//表格样式
+$table-cell-padding: 8px !default; //内边距
+$table-condensed-cell-padding: 5px !default; //紧凑型表格
+
+$table-bg: transparent !default; //表格背景色（透明）
+$table-bg-accent: #f9f9f9 !default; //.table-striped 类的背景色
+$table-bg-hover: #f5f5f5 !default; //hover状态的背景色
+$table-bg-active: $table-bg-hover !default; //激活状态的背景色
+
+$table-border-color: #ddd !default; //边框颜色
+
+//按钮
+$btn-font-weight: normal !default; //字体粗度
+
+$btn-default-color: #333 !default; //默认颜色
+$btn-default-bg: #fff !default; //默认背景颜色
+$btn-default-border: #ccc !default; //边框颜色
+//基础按钮
+$btn-primary-color: #fff !default;
+$btn-primary-bg: $brand-primary !default;
+$btn-primary-border: darken($btn-primary-bg, 5%) !default;
+//表示成功状态的按钮
+$btn-success-color: #fff !default;
+$btn-success-bg: $brand-success !default;
+$btn-success-border: darken($btn-success-bg, 5%) !default;
+//表示信息的按钮
+$btn-info-color: #fff !default;
+$btn-info-bg: $brand-info !default;
+$btn-info-border: darken($btn-info-bg, 5%) !default;
+//表示警告的按钮
+$btn-warning-color: #fff !default;
+$btn-warning-bg: $brand-warning !default;
+$btn-warning-border: darken($btn-warning-bg, 5%) !default;
+//表示危险的按钮
+$btn-danger-color: #fff !default;
+$btn-danger-bg: $brand-danger !default;
+$btn-danger-border: darken($btn-danger-bg, 5%) !default;
+//disable状态的按钮
+$btn-link-disable-color: $gray-light !default;
+//按钮边框圆角半径
+$btn-border-radius-base: $border-radius-base !default;
+$btn-border-radius-large: $border-radius-large !default;
+$btn-border-radius-small: $border-radius-small !default;

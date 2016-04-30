@@ -194,8 +194,8 @@ nav {
   font-size: 12px; }
 
 .star, .guess {
-  margin: 20px 0; }
-  .star p:first-child, .guess p:first-child {
+  margin: 20px 0 60px 0; }
+  .star > p, .guess > p {
     font-size: 20px; }
   .star ul, .guess ul {
     display: block;
@@ -206,7 +206,7 @@ nav {
     float: left;
     border: #EEEEEE 1px solid;
     text-align: center;
-    margin-bottom: 3em; }
+    padding-bottom: 20px; }
   .star img, .guess img {
     width: 180px;
     height: 180px;
@@ -214,7 +214,7 @@ nav {
   .star a, .guess a {
     font-size: 12px; }
   .star li p, .guess li p {
-    line-height: 20px; }
+    line-height: 1.5em; }
 
 .shop-box {
   width: 100%;
@@ -222,30 +222,35 @@ nav {
   .shop-box .floor {
     width: 1200px;
     margin: 0 auto 20px; }
-  .shop-box p:first-child {
-    font-size: 20px; }
-  .shop-box .brand {
-    float: left;
-    margin-top: 10px; }
-  .shop-box ul {
-    display: block;
-    height: 535px;
-    margin-top: 10px; }
-  .shop-box ul li {
-    width: 240px;
-    height: 267px;
-    float: left;
-    background-color: #fff;
-    border: #EEEEEE 1px solid;
-    text-align: center; }
-  .shop-box a {
-    font-size: 12px; }
-  .shop-box li p {
-    line-height: 20px; }
+
+.floor > p {
+  font-size: 20px;
+  padding: 30px 0; }
+.floor .brand {
+  float: left; }
+.floor ul {
+  display: block;
+  height: 535px; }
+.floor ul li {
+  width: 240px;
+  height: 267px;
+  float: left;
+  background-color: #fff;
+  border: #EEEEEE 1px solid;
+  text-align: center; }
+.floor a {
+  font-size: 12px; }
+.floor li p {
+  line-height: 20px; }
 
 .operate {
   float: right;
-  margin: 10px 0 0 10px; }
+  margin-left: 10px; }
+
+.text {
+  float: right;
+  font-size: 10px;
+  color: #6f7170; }
 
 #previous {
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -143px -31px no-repeat;
@@ -268,12 +273,6 @@ nav {
   width: 50px;
   padding-right: 20px;
   margin-left: 12px; }
-
-.text {
-  float: right;
-  font-size: 10px;
-  color: #6f7170;
-  margin: 8px 0 0; }
 
 #social-floor ul {
   height: 250px; }
