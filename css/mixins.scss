@@ -44,3 +44,10 @@
     border: 1px #ddd solid;
     box-shadow: #ccc 1px 1.5px;
 }
+
+//background img
+@mixin background-img($back-url, $back-pos, $width, $height) {
+    background: $back-url $back-pos no-repeat;
+    height: $height;
+    width: $width;
+}
