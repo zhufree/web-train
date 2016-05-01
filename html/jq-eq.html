@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq-eq</title>
+</head>
+<body>
+    <p>eq() 方法将匹配元素集缩减值指定 index 上的一个。</p>
+    <ul>
+      <li>list item 1</li>
+      <li>list item 2</li>
+      <li>list item 3</li>
+      <li>list item 4</li>
+      <li>list item 5</li>
+    </ul>
+    <button>click:item-3->red</button>
+    <pre>
+        $(function(){
+            $(document).on('click', 'button', function(event) {
+                event.preventDefault();
+                $('li').eq(2).css('background-color', 'red');
+            });
+        })
+    </pre>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script>
+$(function(){
+    $(document).on('click', 'button', function(event) {
+        event.preventDefault();
+        $('li').eq(2).css('background-color', 'red');
+    });
+})
+</script>
+</html>

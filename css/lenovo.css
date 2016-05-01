@@ -73,22 +73,22 @@ nav {
     color: #bdbdbd;
     font-size: 12px; }
 
-.tabs {
+#tabs {
   height: 50px;
   text-align: center; }
-  .tabs a {
+  #tabs a {
     font-size: 17px;
     color: #000;
     padding-right: 45px;
     line-height: 50px; }
-  .tabs span {
+  #tabs span {
     position: absolute;
     margin: 3px -50px; }
-  .tabs #new {
+  #tabs #new {
     background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -275px -198px no-repeat;
     height: 21px;
     width: 332px; }
-  .tabs #hot {
+  #tabs #hot {
     background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -268px -3px no-repeat;
     height: 21px;
     width: 332px; }
@@ -108,7 +108,7 @@ nav {
   .left-bar .no-bot-bdr {
     border: none; }
 
-.detail {
+#detail {
   display: none;
   width: 1010px;
   height: 365px;
@@ -116,9 +116,9 @@ nav {
   position: absolute;
   margin: -368px 0 0 190px;
   padding: 40px 30px 0 50px; }
-  .detail .cls {
+  #detail .cls {
     width: 630px; }
-  .detail .display {
+  #detail .display {
     float: right;
     position: relative;
     top: -280px;
@@ -193,54 +193,57 @@ nav {
   color: red;
   font-size: 12px; }
 
-.star, .guess {
+#star, #guess {
   margin: 20px 0 60px 0; }
-  .star > p, .guess > p {
+  #star > p, #guess > p {
     font-size: 20px; }
-  .star ul, .guess ul {
+  #star ul, #guess ul {
     display: block;
     margin-top: 10px;
     height: 225px; }
-  .star ul li, .guess ul li {
+  #star ul li, #guess ul li {
     width: 200px;
     float: left;
     border: #EEEEEE 1px solid;
     text-align: center;
     padding-bottom: 20px; }
-  .star img, .guess img {
+  #star img, #guess img {
     width: 180px;
     height: 180px;
     margin: 0 auto; }
-  .star a, .guess a {
+  #star a, #guess a {
     font-size: 12px; }
-  .star li p, .guess li p {
+  #star li p, #guess li p {
     line-height: 1.5em; }
+
+.top-red {
+  border-top: red 1px solid !important; }
 
 .shop-box {
   width: 100%;
   background-color: #f5f5f5; }
-  .shop-box .floor {
+  .shop-box .floor, .shop-box #social-floor {
     width: 1200px;
     margin: 0 auto 20px; }
 
-.floor > p {
+.floor > p, #social-floor > p {
   font-size: 20px;
   padding: 30px 0; }
-.floor .brand {
+.floor .brand, #social-floor .brand {
   float: left; }
-.floor ul {
+.floor ul, #social-floor ul {
   display: block;
   height: 535px; }
-.floor ul li {
+.floor ul li, #social-floor ul li {
   width: 240px;
   height: 267px;
   float: left;
   background-color: #fff;
   border: #EEEEEE 1px solid;
   text-align: center; }
-.floor a {
+.floor a, #social-floor a {
   font-size: 12px; }
-.floor li p {
+.floor li p, #social-floor li p {
   line-height: 20px; }
 
 .operate {
@@ -303,6 +306,9 @@ nav {
   top: 20px;
   left: 120px; }
 
+.shadow {
+  box-shadow: 0 0 5px 3px #555; }
+
 #social {
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -170px -72px no-repeat;
   height: 22px;
@@ -339,16 +345,16 @@ nav {
   width: 32px;
   margin: 5px 10px; }
 
-.service {
+#service {
   width: 1200px;
   margin: 0 auto; }
-  .service > ul {
+  #service > ul {
     display: block;
     height: 140px; }
-  .service > ul > li {
+  #service > ul > li {
     float: left;
     padding-right: 142px; }
-  .service > ul > li:last-child {
+  #service > ul > li:last-child {
     padding: 0; }
 
 .single-serv li {
@@ -411,5 +417,11 @@ aside {
   position: fixed;
   right: 0;
   bottom: 60%; }
+
+.hover-link {
+  color: red !important; }
+
+.hover-li {
+  color: #000 !important; }
 
 /*# sourceMappingURL=lenovo.css.map */

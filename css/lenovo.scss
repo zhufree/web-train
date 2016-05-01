@@ -72,7 +72,7 @@ nav {
     }
 }
 
-.tabs {
+#tabs {
     height: 50px;
     text-align: center;
     a {
@@ -112,7 +112,7 @@ nav {
     }
 }
 
-.detail{
+#detail{
     display: none;
     width: 1010px;
     height: 365px;
@@ -213,7 +213,7 @@ nav {
     font-size: $fz-1;
 }
 
-.star, .guess {
+#star, #guess {
     margin: 20px 0 60px 0;
     >p {
         font-size: $fz-5;
@@ -241,6 +241,10 @@ nav {
     li p {
         line-height: 1.5em;
     }
+}
+
+.top-red{
+    border-top: red 1px solid !important;
 }
 
 .shop-box {
@@ -306,6 +310,7 @@ nav {
 
 
 #social-floor {
+    @extend .floor;
     ul {
         height: 250px;
     }
@@ -343,6 +348,10 @@ nav {
     }
 }
 
+.shadow {
+    box-shadow: 0 0 5px 3px #555;
+}
+
 #social {
     @include background-img($back-url, -170px -72px, 44px, 22px);
     margin: 10px 10px;
@@ -374,7 +383,7 @@ nav {
     margin: 5px 10px;
 }
 
-.service {
+#service {
     width: 1200px;
     margin: 0 auto;
     >ul {
@@ -453,4 +462,11 @@ aside {
     position: fixed;
     right: 0;
     bottom: 60%;
+}
+
+.hover-link {
+    color: red !important;
+}
+.hover-li {
+    color: $black !important;
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq-chilren</title>
+</head>
+<body>
+    <p>filter() 方法将匹配元素集合缩减为匹配指定选择器的元素。</p>
+    <ul>
+      <li>list item 1</li>
+      <li>list item 2</li>
+      <li>list item 3</li>
+      <li>list item 4</li>
+      <li>list item 5</li>
+      <li>list item 6</li>
+    </ul>
+    <button>click:even li->red</button>
+    <pre>
+      $(function(){
+        $(document).on('click', 'button', function(event) {
+          event.preventDefault();
+          $('li').filter(':even').css('background-color', 'red');
+        });
+      });
+    </pre>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script>
+  $(function(){
+    $(document).on('click', 'button', function(event) {
+      event.preventDefault();
+      $('li').filter(':even').css('background-color', 'red');
+    });
+  });
+</script>
+</html>
