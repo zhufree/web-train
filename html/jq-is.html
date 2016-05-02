@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq-is</title>
+</head>
+<body>
+    <p>is() 根据选择器、元素或 jQuery 对象来检测匹配元素集合，如果这些元素中至少有一个元素匹配给定的参数，则返回 true。</p>
+    <ul>
+      <li>list <strong>item 1</strong></li>
+      <li>list <em>item 2</em></li>
+      <li>list item 3</li>
+    </ul>
+    <pre>
+      $(function(){
+        $(document).on('click', 'ul', function(event) {
+          event.preventDefault();
+          var $target = $(event.target);
+          if ($target.is("li") ) {
+            $target.css("background-color", "red");
+          }
+        });
+      });
+    </pre>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script>
+  $(function(){
+    $(document).on('click', 'ul', function(event) {
+      event.preventDefault();
+      var $target = $(event.target);
+      if ($target.is("li") ) {
+        $target.css("background-color", "red");
+      }
+    });
+  });
+</script>
+</html>

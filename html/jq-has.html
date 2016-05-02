@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq-has</title>
+</head>
+<body>
+    <p>has() 将匹配元素集合缩减为拥有匹配指定选择器或 DOM 元素的后代的子集。</p>
+    <p>如果给定一个表示 DOM 元素集合的 jQuery 对象，.has() 方法用匹配元素的子集来构造一个新的 jQuery 对象。所使用的选择器用于检测匹配元素的后代；如果任何后代元素匹配该选择器，该元素将被包含在结果中。</p>
+    <ul>
+      <li>list item 1</li>
+      <li>list item 2
+        <ul>
+          <li>list item 2-a</li>
+          <li>list item 2-b</li>
+        </ul>
+      </li>
+      <li>list item 3</li>
+      <li>list item 4</li>
+    </ul>
+    <button>click:even ul in li ->red</button>
+    <pre>
+      $(function(){
+        $(document).on('click', 'button', function(event) {
+          event.preventDefault();
+          $('li').has('ul').css('background-color', 'red');
+        });
+      });
+    </pre>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script>
+  $(function(){
+    $(document).on('click', 'button', function(event) {
+      event.preventDefault();
+      $('li').has('ul').css('background-color', 'red');
+    });
+  });
+</script>
+</html>

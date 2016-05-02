@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq-map</title>
+</head>
+<body>
+    <p>map() 把每个元素通过函数传递到当前匹配集合中，生成包含返回值的新的 jQuery 对象。</p>
+    <form method="post" action="">
+      <fieldset>
+        <div>
+          <label for="two">2</label>
+          <input type="checkbox" value="2" id="two" name="number[]">
+        </div>
+        <div>
+          <label for="four">4</label>
+          <input type="checkbox" value="4" id="four" name="number[]">
+        </div>
+        <div>
+          <label for="six">6</label>
+          <input type="checkbox" value="6" id="six" name="number[]">
+        </div>
+        <div>
+          <label for="eight">8</label>
+          <input type="checkbox" value="8" id="eight" name="number[]">
+        </div>
+      </fieldset>
+    </form>
+    <p id="result"></p>
+    <button>click: show checked id.</button>
+    <pre>
+     $(function(){
+      $(document).on('click', 'button', function(event) {
+        event.preventDefault();
+        var result = $(':checked').map(function() {
+          return this.id;
+        }).get().join(',');
+        console.log(result);
+        $('#result').text(result);
+      });
+    });
+    </pre>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script>
+  $(function(){
+    $(document).on('click', 'button', function(event) {
+      event.preventDefault();
+      var result = $(':checked').map(function() {
+        return this.id;
+      }).get().join(',');
+      console.log(result);
+      $('#result').text(result);
+    });
+  });
+</script>
+</html>

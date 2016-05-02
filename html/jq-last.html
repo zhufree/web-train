@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>jq-filter</title>
+    <title>jq-last</title>
 </head>
 <body>
-    <p>filter() 方法将匹配元素集合缩减为匹配指定选择器的元素。</p>
+    <p>last() 将匹配元素集合缩减为集合中的最后一个元素。</p>
     <ul>
       <li>list item 1</li>
       <li>list item 2</li>
@@ -14,12 +14,12 @@
       <li>list item 5</li>
       <li>list item 6</li>
     </ul>
-    <button>click:even li->red</button>
+    <button>click: last li->red</button>
     <pre>
       $(function(){
         $(document).on('click', 'button', function(event) {
           event.preventDefault();
-          $('li').filter(':even').css('background-color', 'red');
+          $('li').last().css('background-color', 'red');
         });
       });
     </pre>
@@ -29,7 +29,7 @@
   $(function(){
     $(document).on('click', 'button', function(event) {
       event.preventDefault();
-      $('li').filter(':even').css('background-color', 'red');
+      $('li').last().css('background-color', 'red');
     });
   });
 </script>
