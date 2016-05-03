@@ -1,0 +1,400 @@
+$bootstarp-sass-asset-helper: false !default;
+
+//Variables变量
+
+//Colors颜色
+//Gray and brand colors for use across Boostrap.
+
+$gray-base: #000 !default; //基础色（黑色）
+//在黑色基础上调用lighten函数提高亮度
+$gray-darker: lighten($gray-base, 13.5%) !default; //更深的灰色
+$gray-dark: lighten($gray-base, 20%) !default; //深灰色
+$gray: lighten($gray-base, 33.5%) !default; //灰色
+$gray-light: lighten($gray-base, 46.7%) !default; //亮灰色
+$gray-lighter: lighten($gray-base, 93.5%) !default; //更亮的灰色
+
+$brand-primary: darken(#428bca, 6.5%) !default; //基本颜色（蓝）
+$brand-success: #5cb85c !default; //表示成功的颜色（绿）
+$brand-info: #5bc0de !default; //表示显示信息的颜色（淡蓝）
+$brand-warning: #f0ad4e !default; //警告色 （橙色）
+$brand-danger: #d9534f !default; //表示危险的颜色（红色）
+
+$body-bg: #fff !default; //body的背景色
+
+$text-color: $gray-dark !default; //默认的字体颜色（深灰色）
+
+$link-color: $brand-primary !default; //链接颜色
+$link-hover-color: darken($link-color, 15%) !default; //hover状态的链接颜色
+$link-hover-decoration: underline !default; //hover状态的链接装饰（下划线）
+
+//默认字体族
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default; //无衬线字体
+$font-family-serif: Georgia, "Time New Roma", Times, serif !default; //有衬线字体
+//等宽字体for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default; //等宽字体
+$font-family-base: $font-family-sans-serif !default; //默认字体
+
+$font-size-base: 14px !default; //默认字体大小
+//运用ceil和floor运算
+$font-size-large: ceil(($font-size-base * 1.25)) !default; //~18px
+$font-size-small: ceil(($font-size-base * 0.85)) !default; //~12px
+//标题字体大小
+$font-size-h1: floor(($font-size-base * 2.6)) !default; //~36px
+$font-size-h2: floor(($font-size-base * 2.15)) !default; //~30px
+$font-size-h3: ceil(($font-size-base * 1.7)) !default; //~24px
+$font-size-h4: ceil(($font-size-base * 1.25)) !default; //~18px
+$font-size-h5: $font-size-base !default;
+$font-size-h6: ceil(($font-size-base * 0.85)) !default; //~12px
+
+//行高，用于button之类的组件
+$line-height-base: 1.428571429 !default; // 20/14，默认行高
+$line-height-computed: floor(($font-size-base * $line-height-base)), !default; //~20
+
+//？？？
+$heading-font-family: inherit !default; //继承自body
+$heading-font-weight: 500 !default; //字体粗度
+$heading-line-height: 1.1 !default; //默认行高
+$heading-color: inherit !default; //默认颜色
+
+//图标字体
+$icon-font-path: if($bootstarp-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/") !default; //图标字体路径
+$icon-font-name: "glyphicons-halfing-regular" !default; //字体文件名字
+$icon-font-svg-id: "glyphicons_halfingregular" !default;
+
+//组件
+//基础padding
+$padding-base-vertical: 6px !default; 
+$padding-base-horizontal: 12px !default;
+//大一些的padding
+$padding-large-vertical: 10px !default;
+$padding-large-horizontal: 16px !default;
+//小一点的padding
+$padding-small-vertical: 5px !default;
+$padding-small-horizontal: 10px !default;
+//更小的padding
+$padding-xs-vertical: 1px !default;
+$padding-xs-horizontal: 5px !default;
+
+$line-height-large: 1.3333333 !default; //大一点的行高
+$line-height-small: 1.5 !default; //小一点的行高
+//边框圆角半径
+$border-radius-base: 4px !default;
+$border-radius-large: 6px !default;
+$border-radius-small: 3px !default;
+//组件激活状态的颜色
+$component-active-color: #fff !default; //颜色
+$component-active-bg: $brand-primary !default; //背景色
+//什么什么的宽度
+$cater-width-base: 4px !default;
+$cater-width-large: 5px !default;
+
+//表格样式
+$table-cell-padding: 8px !default; //内边距
+$table-condensed-cell-padding: 5px !default; //紧凑型表格
+
+$table-bg: transparent !default; //表格背景色（透明）
+$table-bg-accent: #f9f9f9 !default; //.table-striped 类的背景色
+$table-bg-hover: #f5f5f5 !default; //hover状态的背景色
+$table-bg-active: $table-bg-hover !default; //激活状态的背景色
+
+$table-border-color: #ddd !default; //边框颜色
+
+//按钮
+$btn-font-weight: normal !default; //字体粗度
+
+$btn-default-color: #333 !default; //默认颜色
+$btn-default-bg: #fff !default; //默认背景颜色
+$btn-default-border: #ccc !default; //边框颜色
+//基础按钮
+$btn-primary-color: #fff !default;
+$btn-primary-bg: $brand-primary !default;
+$btn-primary-border: darken($btn-primary-bg, 5%) !default;
+//表示成功状态的按钮
+$btn-success-color: #fff !default;
+$btn-success-bg: $brand-success !default;
+$btn-success-border: darken($btn-success-bg, 5%) !default;
+//表示信息的按钮
+$btn-info-color: #fff !default;
+$btn-info-bg: $brand-info !default;
+$btn-info-border: darken($btn-info-bg, 5%) !default;
+//表示警告的按钮
+$btn-warning-color: #fff !default;
+$btn-warning-bg: $brand-warning !default;
+$btn-warning-border: darken($btn-warning-bg, 5%) !default;
+//表示危险的按钮
+$btn-danger-color: #fff !default;
+$btn-danger-bg: $brand-danger !default;
+$btn-danger-border: darken($btn-danger-bg, 5%) !default;
+//disable状态的按钮
+$btn-link-disable-color: $gray-light !default;
+//按钮边框圆角半径
+$btn-border-radius-base: $border-radius-base !default;
+$btn-border-radius-large: $border-radius-large !default;
+$btn-border-radius-small: $border-radius-small !default;
+
+//Forms表单样式
+//input输入框
+$input-bg: #fff !default; //输入框背景色
+$input-bg-disabled: $gray-lighter !default; //禁止的输入框背景色
+
+$input-color: $gray !default; //输入的字体颜色
+$input-border: #ccc !default; //边框颜色
+$input-border-radius: $border-radius-base !default; //圆角边框半径
+$input-border-radius-large: $border-radius-large !default; //大号圆角边框半径
+$input-border-radius-small: $border-radius-small !default; //小号圆角边框半径
+$input-border-focus: #66afe9 !default; //获得焦点的输入框边框颜色（蓝色）
+
+$input-height-base: ($line-height-computed + ($padding-base-vertical * 2) + 2) !default; //基础输入框高度
+$input-height-large: (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default; //大号输入框
+$input-height-small: (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default; //小号输入框
+
+$form-group-margin-bottom: 15px !default; //表单组件外边框
+
+$legend-color: $gray-dark !default; //？？？
+$legend-border-color: #e5e5e5 !default; //边框颜色
+
+$input-group-addon-bg: $gray-lighter !default; //小组件背景色
+$input-group-addon-border-color: $input-border !default; //小组件边框颜色
+
+$cursor-disabled: not-allowed !default; //禁止状态的游标
+
+//Dropdowns
+$dropdown-bg: #fff !default; //下拉菜单的背景色
+$dropdown-border: rbga(0,0,0,.15) !default; //下拉菜单的边框
+$dropdown-fallback-border: #ccc !default; //回退键边框？？
+$dropdown-divider-bg: #e5e5e5 !default; //分隔符背景色
+//链接颜色
+$dropdown-link-color: $gray-dark !default;
+$dropdown-link-hover-color: darken($gray-dark, 5%) !default;
+$dropdown-link-hover-bg: #f5f5f5 !default;
+$dropdown-link-active-color: $component-active-color !default;
+$dropdown-link-active-bg: $component-active-bg !default;
+$dropdown-link-disabled-color: $gray-light !default;
+
+$dropdown-header-color: $gray-light !default;
+$dropdown-caret-color: #000 !default;
+
+//z-index
+$zindex-navbar: 1000 !default;
+$zindex-dropdown: 1000 !default;
+$zindex-popover: 1060 !default;
+$zindex-tooltip: 1070 !default;
+$zindex-navbar-fixed: 1030 !default;
+$zindex-modal-background: 1040 !default;
+$zindex-modal: 1050 !default;
+
+//Media queries breakpoints媒体查询断点
+$screen-xs: 480px !default; //超小屏幕
+$screen-xs-min: $screen-xs !default;
+$screen-phone: $screen-xs-min !default; //手机屏幕
+
+$screen-sm: 768px !default; //小型屏幕
+$screen-sm-min: $screen-sm !default;
+$screen-tablet: $screen-sm-min !default; //平板电脑
+
+$screen-md: 992px !default; //中等屏幕
+$screen-md-min: $screen-md !default;
+$screen-desktop: $screen-md-min !default; //桌面
+
+$screen-lg: 1200px !default; //大型屏幕
+$screen-lg-min: $screen-lg !default;
+$screen-lg-desktop: $screen-lg-min !default; //大桌面
+
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+
+//Grid system网格系统
+$grid-columns: 12 !default; //列数
+$grid-gutter-width: 30px !default; //沟槽
+$grid-float-breakpoint: $screen-sm-min !default; //？？
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+$container-tablet: (720px + $grid-gutter-width) !default; //平板设备容器宽度
+$container-sm: $container-tablet !default; //小型容器宽度
+$container-desktop: (940px + $grid-gutter-width) !default; //桌面容器宽度
+$container-md: $container-desktop !default;
+$container-large-desktop: (1140px + $grid-gutter-width) !default; //大型桌面
+$container-lg: $container-large-desktop !default;
+
+//Navbar 导航栏
+$navbar-height: 50px !default; //默认导航栏高度
+$navbar-margin-bottom: $line-height-computed !default; //下外边距
+$navbar-border-radius: $border-radius-base !default; //圆角边框半径
+$navbar-padding-horizontal: floor(($grid-gutter-width / 2)) !default; //水平内边距
+$navbar-padding-vertical: (($navbar-height - $line-height-computed) / 2) !default; //垂直内边距
+$navbar-collapse-max-height: 340px !default; //折叠导航栏
+
+$navbar-default-color: #777 !default; //导航栏颜色
+$navbar-default-bg: #f8f8f8 !default; //背景色
+$navbar-default-border: darken($navbar-default-bg, 6.5%) !default; //边框颜色
+//链接颜色
+$navbar-default-link-color: #777 !default; 
+$navbar-default-link-hover-color: #333 !default;
+$navbar-default-link-active-bg: darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-disabled-color: #ccc !default;
+$navbar-default-link-disabled-bg: transparent !default;
+//商标颜色
+$navbar-default-brand-color: $navbar-default-link-color !default;
+$navbar-default-brand-hover-color: darken($navbar-default-brand-color, 10%) !default;
+$navbar-default-brand-hover-bg: transparent !default;
+
+$navbar-default-toggle-hover-bg: #ddd !default;
+$navbar-default-toggle-icon-bar-bg: #888 !default;
+$navbar-default-toggle-border-color: #ddd !default;
+
+//Inverted navbar 反转导航栏
+$navbar-inverse-color: lighten($gray-light, 15%) !default;
+$navbar-inverse-bg: #222 !default;
+$navbar-inverse-border: darken($navbar-inverse-bg, 10%) !default;
+
+$navbar-inverse-link-color: lighten($gray-light, 15%) !default;
+$navbar-inverse-link-hover-color: #fff !default;
+$navbar-inverse-link-hover-bg: transparent !default;
+$navbar-inverse-link-active-color: $navbar-inverse-link-hover-color !default;
+$navber-inverse-link-active-bg: darken($navbar-inverse-bg, 10%) !default;
+$navbar-inverse-link-disabled-color: #444 !default;
+$navbar-inverse-link-disabled-bg: transparent !default;
+
+$navbar-inverse-brand-color: $navbar-inverse-link-color !default;
+$navbar-inverse-brand-hover-color: #fff !default;
+$navbar-inverse-brand-hover-bg: transparent !default;
+
+$navbar-inverse-toggle-hover-bg: #333 !default;
+$navbar-inverse-toggle-icon-bar-bg: #fff !default;
+$navbar-inverse-toggle-border-bg: #333 !default;
+
+//Navs
+$nav-link-padding: 10px 15px !default;
+$nav-link-hover-bg: $gray-lighter !default;
+$nav-disabled-linl-color: $gray-light !default;
+$nav-disabled-linl-hover-color: $gray-light !default;
+
+//Tabs
+$nav-tabs-border-color: #ddd !default;
+$nav-tabs-link-hover-border-color: $gray-lighter !default;
+$nav-tabs-active-link-hover-bg: $body-bg !default;
+$nav-tabs-active-link-hover-color: $gray !default;
+$nav-tabs-active-link-hover-border-color: #ddd !default;
+$nav-tabs-justified-link-border-color: #ddd !default;
+$nav-tabs-justified-active-link-border-color: $body-bg !default;
+//Pills
+$nav-pills-border-radius: $border-radius-base !default;
+$nav-pills-active-link-hover-bg: $component-active-bg !default;
+$nav-pills-active-link-hover-color: $component-active-color !default;
+//Pagination
+$pagination-color: $link-color !default;
+$pagination-bg: #fff !default;
+$pagination-border: #ddd !default;
+$pagination-hover-color: $link-hover-color !default;
+$pagination-hover-bg: $gray-lighter !default;
+$pagination-hover-border: #ddd !default;
+$pagination-active-color: #fff !default;
+$pagination-active-bg: $brand-primary !default;
+$pagination-active-border: $brand-primary !default;
+$pagination-disabled-color: $gray-light !default;
+$pagination-disabled-bg: #fff !default;
+$pagination-disabled-border: #ddd !default;
+
+//Pager
+$pager-bg: $pagination-bg !default;
+$pager-border: $pagination-border !default;
+$pager-hover-bg: $pagination-hover-bg !default;
+$pager-active-bg: $pagination-active-bg !default;
+$pager-active-color: $pagination-active-color !default;
+$pager-disabled-color: $pagination-disabled-color !default;
+
+//Jumbotron
+$jumbotron-padding: 30px !default;
+$jumbotron-color: inherit !default;
+$jumbotron-bg: $gray-lighter !default;
+$jumbotron-heading-color: inherit !default;
+$jumbotron-font-size: ceil(($font-size-base * 1.5)) !default;
+$jumbotron-heading-font-size: ceil(($font-size-base * 4.5)) !default;
+
+//Form states and alerts
+$state-success-text: #3c763d !default;
+$state-success-bg: #dff0d8 !default;
+$state-success-border: darken(adjust-hue($state-success-bg, -10), 5%) !default;
+$state-info-text: #31708f !default;
+$state-info-bg: #d9edf7 !default;
+$state-info-border: darken(adjust-hue($state-info-bg, -10), 5%) !default;
+$state-warning-text: #8a6d3b !default;
+$state-warning-bg: #fcf8e3 !default;
+$state-warning-border: darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+$state-danger-text: #a94442 !default;
+$state-danger-bg: #f2dede !default;
+$state-danger-border: darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+
+//Tooltips
+$tooltip-max-width: 200px !default;
+$tooltip-color: #fff !default;
+$tooltip-bg: #000 !default;
+$tooltip-opacity: .9 !default;
+$tooltip-arrow-width: 5px !default;
+$tooltip-arrow-coloe: $tooltip-bg !default;
+
+//Popovers
+$popover-bg: #fff !default;
+$popover-max-width: 276px !default;
+$popover-border-color: rgba(0,0,0,.2) !default;
+$popover-fallback-border-color: #ccc !default;
+$popover0title-bg: darken($popover-bg, 3%) !default;
+$popover-arrow-width: 10px !default;
+$popover-arrow-color: $popover-bg !default;
+$popover-arrow-outer-width: ($popover-arrow-width + 1) !default;
+$popover-arrow-outer-color: fade_in($popover-border-color, 0.05) !default;
+$popover-arrow-outer-fallback-color: darken($popover-fallback-border-color, 20%) !default;
+
+//Label
+$label-default-bg: $gray-light !default;
+$label-primary-bg: $brand-primary !default;
+$label-success-bg: $brand-success !default;
+$label-info-bg: $brand-info !default;
+$label-warning-bg: $brand-warning !default;
+$label-danger-bg: $brand-danger !default;
+
+$label-color: #fff !default;
+$label-link-hover-color: #fff !default;
+
+//Modals
+$modal-inner-padding: 15px !default;
+$modal-title-padding: 15px !default;
+$modal-title-line-height: $line-height-base !default;
+$modal-content-bg: #fff !default;
+$modal-content-border-color: rgba(0,0,0,.2) !default;
+$modal-content-fallback-border-color: #999 !default;
+
+$modal-backdrop-bg: #000 !default;
+$modal-backdrop-opacity: .5 !default;
+$modal-header-border-color: #e5e5e5 !default;
+$modal-footer-border-color: $modal-header-border-color !default;
+$modal-lg: 900px !default;
+$modal-md: 600px !default;
+$modal-sm: 300px !default;
+
+//Alerts
+$alert-padding: 15px !default;
+$alert-border-radius: $border-radius-base !default;
+$alert-link-font-weight: bold !default;
+$alert-success-bg: $state-success-bg !default;
+$alert-success-text: $state-success-text !default;
+$alert-success-border: $state-success-border !default;
+$alert-info-bg: $state-info-bg !default;
+$alert-info-text: $state-info-text !default;
+$alert-info-border: $state-info-border !default;
+$alert-warning-bg: $state-warning-bg !default;
+$alert-warning-text: $state-warning-text !default;
+$alert-warning-border: $state-warning-border !default;
+$alert-danger-bg: $state-danger-bg !default;
+$alert-danger-text: $state-danger-text !default;
+$alert-danger-border: $state-danger-border !default;
+
+//Progress bars
+$progress-bg: #f5f5f5 !default;
+$progress-bar-color: #fff !default:
+$progress-border-radius: $border-radius-base !default;
+$progress-bar-bg: $brand-primary !default;
+$orogress-bar-success-bg: $brand-success !default;
+$progress-bar-warning-bg: $brand-warning !default;
+$progress-bar-danger-bg: $brand-danger !default;

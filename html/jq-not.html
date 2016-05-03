@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq-not</title>
+</head>
+<body>
+    <p>not()从匹配元素集合中删除元素。</p>
+    <ul>
+	  <li>list item 1</li>
+	  <li>list item 2</li>
+	  <li>list item 3</li>
+	  <li>list item 4</li>
+	  <li>list item 5</li>
+	</ul>
+    <button class="btn">Click:not even li->red</button>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script>
+$(function() {
+    $(document).on('click', '.btn', function(event) {
+    	$('li').not(':even').css('backgroundColor', 'red');
+    });        
+})
+</script>
+</html>

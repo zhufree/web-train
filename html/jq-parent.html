@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq-parent</title>
+</head>
+<body>
+    <p>parent() 获得当前匹配元素集合中每个元素的父元素，使用选择器进行筛选是可选的。</p>
+    <ul class="level-1">
+      <li class="item-i">I</li>
+      <li class="item-ii">II
+        <ul class="level-2">
+          <li class="item-a">A</li>
+          <li class="item-b">B
+            <ul class="level-3">
+              <li class="item-1">1</li>
+              <li class="item-2">2</li>
+              <li class="item-3">3</li>
+            </ul>
+          </li>
+          <li class="item-c">C</li>
+        </ul>
+      </li>
+      <li class="item-iii">III</li>
+    </ul>
+    <button class="btn">Click:parent of A->red</button>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script>
+$(function() {
+    $(document).on('click', '.btn', function(event) {
+    	$('li.item-a').parent().css('backgroundColor', 'red');
+    });        
+})
+</script>
+</html>

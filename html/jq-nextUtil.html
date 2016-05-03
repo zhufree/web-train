@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq-nextUtil</title>
+</head>
+<body>
+    <p>nextUntil() 获得每个元素所有跟随的同胞元素，但不包括被选择器、DOM 节点或已传递的 jQuery 对象匹配的元素。</p>
+    <p>如果给定一个表示 DOM 元素集合的 jQuery 对象，.nextUntil() 方法允许我们搜索 DOM 树中的元素跟随的同胞元素，当遇到被该方法的参数所匹配的元素时会停止搜索。返回的新 jQuery 对象包含所有跟随的同胞元素，但不包含被参数匹配的元素。如果选择器不匹配或未规定选择器，则会选取所有跟随的同胞；如果不提供供筛选的选择器，则该方法选取的元素与 .nextAll() 方法相同。
+    </p>
+    <ul>
+       <li class="foo">list item 1:foo</li>
+       <li>list item 2</li>
+       <li class="bar">list item 3:bar</li>
+       <li>list item 4</li>
+       <li class="foo">list item 5:foo</li>
+    </ul>
+    <button class="btn1">Click:li until bar->red</button>
+    <button class="btn2">Click:li-bar until last foo->green</button>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script>
+$(function() {
+    $(document).on('click', '.btn1', function(event) {
+		$('li.foo').nextUntil('.bar').css('backgroundColor', 'red');
+    }).on('click', '.btn2', function(event) {
+		$('li.foo').nextUntil('.foo', '.bar').css('backgroundColor', 'green');
+    });        
+})
+</script>
+</html>
