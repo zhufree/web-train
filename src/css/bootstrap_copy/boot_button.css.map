@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,IAAK;EACJ,OAAO,EAAE,YAAY;EACrB,aAAa,EAAE,CAAC",
-"sources": ["boot_button.scss"],
-"names": [],
-"file": "boot_button.css"
-}

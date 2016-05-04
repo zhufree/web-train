@@ -392,9 +392,119 @@ $alert-danger-border: $state-danger-border !default;
 
 //Progress bars
 $progress-bg: #f5f5f5 !default;
-$progress-bar-color: #fff !default:
+$progress-bar-color: #fff !default;
 $progress-border-radius: $border-radius-base !default;
 $progress-bar-bg: $brand-primary !default;
 $orogress-bar-success-bg: $brand-success !default;
 $progress-bar-warning-bg: $brand-warning !default;
 $progress-bar-danger-bg: $brand-danger !default;
+$progress-bar-info-bg: $brand-info !default;
+
+$list-group-bg: #fff !default;
+$list-group-border: #ddd !default;
+$list-group-border-radius: $border-radius-base !default;
+$list-group-hover-bg: #f5f5f5 !default;
+$list-group-active-color: $component-active-color !default;
+$list-group-active-bg: $component-active-bg !default;
+$list-group-active-border: $list-group-active-bg !default;
+$list-group-active-text-color: lighten($list-group-active-bg, 40%) !default;
+$list-group-disabled-color: $gray-light !default;
+$list-group-disabled-bg: $gray-lighter !default;
+$list-group-disabled-text-color: $list-group-disabled-color !default;
+$list-group-link-color: #555 !default;
+$list-group-link-hover-color: $list-group-link-color !default;
+$list-group-link-heading-color: #333 !default;
+
+//Panels
+$panel-bg: #fff !default;
+$panel-body-padding: 15px !default;
+$padding-heading-padding: 10px 15px !default;
+$panel-footer-padding: $padding-heading-padding !default;
+$panel-border-radius: $border-radius-base !default;
+$panel-inner-border: #ddd !default;
+$panel-footer-bg: #f5f5f5 !default;
+$panel-default-text: $gray-dark !default;
+$panel-default-border: #ddd !default;
+$Panel-default-heading-bg: #f5f5f5 !default;
+$panel-primary-text: #fff !default;
+$panel-primary-border: $brand-primary !default;
+$panel-primary-heading-bg: $brand-primary !default;
+$panel-success-text: $state-success-text !default;
+$panel-success-border: $state-success-border !default;
+$panel-success-headind-bg: $state-success-bg !default;
+$panel-info-text: $state-info-text !default;
+$panel-info-border: $state-info-border !default;
+$panel-info-headind-bg: $state-info-bg !default;
+$panel-warning-text: $state-warning-text !default;
+$panel-warning-border: $state-warning-border !default;
+$panel-warning-headind-bg: $state-warning-bg !default;
+$panel-danger-text: $state-danger-text !default;
+$panel-danger-border: $state-danger-border !default;
+$panel-danger-headind-bg: $state-danger-bg !default;
+
+//Thumbnails
+$thumbnail-padding: 4px !default;
+$thumbnail-bg: $body-bg !default;
+$thumbnail-border: #ddd !default;
+$thumbnail-border-radius: $border-radius-base !default;
+$thumbnail-caption-color: $text-color !default;
+$thumbnail-caption-padding: 9px !default;
+
+//Wells
+$well-bg: #f5f5f5 !default;
+$well-border: darken($well-bg, 7%) !default;
+
+//Badges
+$badge-color: #fff !default;
+$badge-link-hover-color: #fff !default;
+$badge-bg: $gray-light !default;
+$badge-active-color: $link-color !default;
+$badge-active-bg: #fff !default;
+$badge-font-weight: bold !default;
+$badge-line-height: 1 !default;
+$badge-border-radius: 10px !default;
+
+//Breadcrumbs
+$breadcrumd-padding-vertical: 8px !default;
+$breadcrumd-padding-horizontal: 15px !default;
+$breadcrumd-bg: #f5f5f5 !default;
+$breadcrumd-color: #ccc !default;
+$breadcrumb-active-color: $gray-light !default;
+$breadcrumd-separator: "/" !default;
+
+//Carousel
+$carousel-text-shadow: 0 1px 2px rgba(0,0,0,.6) !default;
+$carousel-control-color: #fff !default;
+$carousel-control-width: 15% !default;
+$carousel-control-opacity: .5 !default;
+$carousel-control-font-size: 20px !default;
+$carousel-indicator-active-bg: #fff !default;
+$carousel-indicator-border-color: #fff !default;
+$carousel-caption-color: #fff !default;
+
+//Close
+$close-font-weight: bold !default;
+$close-color: #000 !default;
+$close-text-shadow: 0 1px 0 #fff !default;
+
+//Code
+$code-color: #c7254e !default;
+$code-bg: #f9f2f4 !default;
+$kbd-color: #fff !default;
+$kbd-bg: #333 !default;
+$pre-bg: #f5f5f5 !default;
+$pre-color: $gray-dark !default;
+$pre-border-color: #ccc !default;
+$pre-scrollable-max-height: 340px !default;
+
+//Type
+$component-offset-horizontal: 180px !default;
+$text-muted: $gray-light !default;
+$abbr-border-color: $gray-light !default;
+$headings-small-color: $gray-light !default;
+$blockquote-small-color: $gray-light !default;
+$blackquote-font-size: ($font-size-base * 1.25) !default;
+$blackquote-border-color: $gray-lighter !default;
+$page-header-border-color: $gray-lighter !default;
+$dl-horizontal-offset: $component-offset-horizontal !default;
+$hr-border: $gray-lighter !default;
