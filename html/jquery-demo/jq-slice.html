@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq-slice</title>
+</head>
+<body>
+    <p>slice() 把匹配元素集合缩减为指定的指数范围的子集。</p>
+    <ul>
+	  <li>list item 1</li>
+	  <li>list item 2</li>
+	  <li>list item 3</li>
+	  <li>list item 4</li>
+	  <li>list item 5</li>
+	</ul>
+    <button class="btn">Click:3-4 li->red</button>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script>
+$(function() {
+    $(document).on('click', '.btn', function(event) {
+		$('li').slice(2, 4).css('background-color', 'red');
+    });        
+})
+</script>
+</html>

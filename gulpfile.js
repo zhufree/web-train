@@ -7,13 +7,13 @@ var gulp = require('gulp'),
     concat = require('gulp-concat');
 
 gulp.task('styles', function(){
-	gulp.src('src/css/bootstrap_copy/*.scss')
+	gulp.src('src/css/**/*.scss')
 		.pipe(sass({outputStyle: 'expanded'})
 			.on('error', sass.logError))
-		.pipe(gulp.dest('dist/css/bootstrap_copy/'))
+		.pipe(gulp.dest('dist/css'))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(minifycss())
-		.pipe(gulp.dest('dist/css/bootstrap_copy/'));
+		.pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('scripts', function () {
@@ -26,8 +26,8 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('watch', function() {
-	gulp.watch('src/css/**/*.scss', ['style']);
-	gulp.watch('src/js/*.js', ['script']);
+	gulp.watch('src/css/**/*.scss', ['styles']);
+	gulp.watch('src/js/*.js', ['scripts']);
 })
 gulp.task('default', function() {
 	gulp.start('styles', 'scripts');

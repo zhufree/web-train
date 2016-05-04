@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq-prev</title>
+</head>
+<body>
+    <p>prev() 获得匹配元素集合中每个元素紧邻的前一个同胞元素，通过选择器进行筛选是可选的。</p>
+    <p>如果给定一个表示 DOM 元素集合的 jQuery 对象，.prev() 方法允许我们在 DOM 树中搜索这些元素的前一个同胞元素，并用匹配元素构造一个新的 jQuery 对象。该方法接受可选的选择器表达式，与我们向 $() 函数中传递的参数类型相同。如果应用这个选择器，则将通过检测元素是否匹配该选择器对元素进行筛选。</p>
+    <ul>
+	   <li>list item 1</li>
+	   <li>list item 2</li>
+	   <li class="third-item">list item 3</li>
+	   <li>list item 4</li>
+	   <li>list item 5</li>
+	</ul>
+    <button class="btn">Click:item before 3->red</button>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script>
+$(function() {
+    $(document).on('click', '.btn', function(event) {
+		$('li.third-item').prev().css('background-color', 'red');
+    });        
+})
+</script>
+</html>

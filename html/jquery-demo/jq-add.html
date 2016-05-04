@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jq-add()</title>
+</head>
+<style>
+div {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  float: left;
+  margin: 20px 20px; }
+
+#c2 {
+  width: 50px;
+  height: 50px;
+  background-color: red; }
+</style>
+<body>
+	<div class="cls-a">A1</div>
+	<div class="cls-a">A2</div>
+	<div class="cls-a">A3</div>
+	<div class="cls-b">B1</div>
+	<div class="cls-b">B2</div>
+	<div class="cls-c" id="c1">C1</div>
+	<div class="cls-c">C3</div>
+	<div class="cls-c">C4</div>
+	<br>
+	<button id='btn1'>highlight A</button>
+	<button id='btn2'>highlight B</button>
+	<button id='btn3'>highlight C1</button>
+	<button id='btn4'>add C2</button>
+	<button id='btn5'>highlight C</button>
+	<button id='btn6'>change c2</button>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script>
+$(function(){
+    var $collect;
+    $(document)on('click', '#btn1', function(event){
+    	event.preventDefault();
+    	$collect = $('.cls-a');
+        $collect.css('background-color', 'red');
+    })
+    .on('click', '#btn2', function(event) {
+    	event.preventDefault();
+    	$collect.add('.cls-b').css('background-color', 'red');
+    })
+    .on('click', '#btn3', function(event) {
+    	event.preventDefault();
+    	$collect.add(document.getElementById('c1')).css('background-color', 'red');
+    })
+    .on('click', '#btn4', function(event) {
+    	event.preventDefault();
+    	$().add('<div class="cls-c" id="c2">C2</div>').appendTo('#c1');
+    })
+    .on('click', '#btn5', function(event) {
+    	event.preventDefault();
+    	$collect.add($('.cls-c')).css('background-color', 'red');
+    })
+    .on('click', '#btn6', function(event) {
+    	event.preventDefault();
+    	$().add('#c2', '#c1').css('background-color', 'blue');
+    });
+});
+</script>
+</html>

@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,GAAI;EACH,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,IAAI;EACtB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,SAAS;;AAElB,GAAI;EACH,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,GAAG",
-"sources": ["jq-add.scss"],
-"names": [],
-"file": "jq-add.css"
-}
