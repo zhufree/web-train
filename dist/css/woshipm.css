@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+body {
+  background-color: #F3F3F3;
+  min-height: 800px;
+  font-size: 14px;
+}
+
+nav {
+  height: 70px;
+  background-color: #58749C;
+  box-shadow: 0 1px 1px 1px #ccc;
+  padding: 0 40px;
+}
+
+nav > a, nav #menu > ul > li > a, nav > div > a {
+  line-height: 70px;
+  float: left;
+  color: white;
+}
+
+nav > a {
+  padding-right: 70px;
+}
+
+nav a > img {
+  vertical-align: middle;
+}
+
+#menu > ul {
+  display: block;
+}
+
+#menu > ul > li {
+  float: left;
+  text-align: center;
+  margin-right: 10px;
+}
+
+#menu > ul > li > a {
+  font-size: 17px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#menu > ul > li > a:hover {
+  background-color: #6781A4;
+  border-bottom: #fff solid 3px;
+}
+
+.down-icon {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/icon.jpg") no-repeat 10px 21px;
+  width: 20px;
+  height: 70px;
+  padding: 10px;
+}
+
+#search {
+  float: right;
+}
+
+#search > a {
+  background: url(http://d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png) 10px -247px no-repeat;
+  height: 70px;
+  width: 40px;
+  padding: 0 10px;
+}
+
+#search > a:hover {
+  background-color: #6781A4;
+}
+
+#user {
+  float: right;
+}
+
+#user > a {
+  padding: 0 10px;
+}
+
+#user > a:hover {
+  background-color: #6781A4;
+}
+
+#user img {
+  border-radius: 50%;
+}
+
+.dropdown-menu {
+  background-color: #fff;
+  position: absolute;
+  margin-top: 70px;
+  border: 2px #6781A4 solid;
+  display: block;
+  padding: 10px;
+}
+
+.text {
+  display: none;
+  width: 300px;
+}
+
+.text > li {
+  float: left;
+  padding: 5px 10px;
+  font-size: 17px;
+}
+
+.text > li > a {
+  color: #233;
+}
+
+.text > li > a:hover {
+  color: #6781A4;
+}
+
+#salon {
+  display: none;
+  text-align: left;
+  padding: 15px 15px 5px;
+  width: 400px;
+}
+
+#salon > li {
+  padding: 10px 5px 20px;
+  border-bottom: dashed #ccc 1px;
+}
+
+#salon > li:last-child {
+  border: none;
+}
+
+#salon > li > p {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+#salon > li > p > a:first-child {
+  color: #233;
+}
+
+.time {
+  color: #555;
+  padding-right: 10px;
+}
+
+.status {
+  font-size: 12px;
+  width: 100px;
+  line-height: 1.5em;
+  background-color: #62b651;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+
+#more {
+  text-align: center;
+}
+
+#more > a {
+  padding: 5px 20px;
+  background-color: #d8e3f2;
+  color: #6781a5;
+  line-height: 30px;
+}
+
+#more > a:hover {
+  background-color: #6781a5;
+  color: #fff;
+}
+
+#user-ctrl {
+  position: absolute;
+  margin-top: 70px;
+  margin-left: -40px;
+  background-color: #6781a5;
+  display: none;
+  text-align: center;
+  width: 115px;
+}
+
+#user-ctrl > li {
+  height: 35px;
+}
+
+#user-ctrl > li > a {
+  display: block;
+  line-height: 35px;
+  color: #fff;
+}
+
+#user-ctrl > li:first-child {
+  border-bottom: 1px #aaa solid;
+}
+
+#user-ctrl > li > a:hover {
+  background-color: #7AA6D4;
+}
