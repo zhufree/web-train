@@ -12,6 +12,10 @@ a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
+#recommend > ul, #join {
+  box-shadow: 0 0 2px 2px #eee;
+}
+
 body {
   background-color: #F3F3F3;
   min-height: 800px;
@@ -208,4 +212,200 @@ nav a > img {
 
 #user-ctrl > li > a:hover {
   background-color: #7AA6D4;
+}
+
+.container {
+  width: 1202px;
+  margin: 50px auto;
+}
+
+#recommend {
+  width: 870px;
+  float: left;
+  margin-right: 20px;
+}
+
+#recommend > ul {
+  display: block;
+  height: 315px;
+  background-color: #fff;
+  padding: 30px 30px;
+}
+
+#recommend > ul > li {
+  float: left;
+  width: 260px;
+  margin-right: 15px;
+}
+
+#recommend > ul > li > a > img {
+  border: 2px #fff solid;
+}
+
+#recommend > ul > li > a > img:hover {
+  border: 2px #7AA6D4 solid;
+}
+
+#recommend > ul > li:last-child {
+  margin-right: 0;
+}
+
+#recommend h4 {
+  line-height: 2em;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#recommend h4 > a {
+  color: #000;
+}
+
+#recommend h4 > a:hover {
+  color: #6781a5;
+}
+
+#recommend p {
+  font-size: 15px;
+}
+
+#join {
+  overflow: hidden;
+  height: 315px;
+  background-color: #fff;
+}
+
+#hang {
+  width: 130px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: #7AA6D4;
+  color: #fff;
+}
+
+#hang > p {
+  line-height: 40px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#logos {
+  margin: 10px auto;
+  padding: 20px 0;
+  height: 85px;
+  border-top: #7AA6D4 1px dashed;
+  border-bottom: #7AA6D4 1px dashed;
+}
+
+#logos > a {
+  float: left;
+  margin-right: 15px;
+}
+
+#logos > a:first-child {
+  margin-left: 13px;
+}
+
+#logos > a:last-child {
+  margin: 0;
+}
+
+#wechat {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") 0px 0px no-repeat;
+  height: 45px;
+  width: 45px;
+}
+
+#wechat > img {
+  display: none;
+  position: absolute;
+  margin-top: 45px;
+  margin-left: -40px;
+}
+
+#wechat:hover {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") 0px -75px no-repeat;
+  height: 45px;
+  width: 45px;
+}
+
+#wechat:hover > img {
+  display: block;
+}
+
+#sina {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -57px 0px no-repeat;
+  height: 45px;
+  width: 45px;
+}
+
+#sina:hover {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -57px -75px no-repeat;
+  height: 45px;
+  width: 45px;
+}
+
+#txweibo {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -114px 0px no-repeat;
+  height: 45px;
+  width: 45px;
+}
+
+#txweibo:hover {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -114px -75px no-repeat;
+  height: 45px;
+  width: 45px;
+}
+
+#feed {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -170px 0px no-repeat;
+  height: 45px;
+  width: 45px;
+}
+
+#feed:hover {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -170px -75px no-repeat;
+  height: 45px;
+  width: 45px;
+}
+
+#qq {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -227px 0px no-repeat;
+  height: 45px;
+  width: 45px;
+}
+
+#qq:hover {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -227px -75px no-repeat;
+  height: 45px;
+  width: 45px;
+}
+
+#qgroups {
+  background-color: #E9EFF7;
+  margin: 0 20px 20px;
+  height: 150px;
+  padding: 15px 10px;
+}
+
+#qgroups > ul {
+  display: block;
+  overflow: hidden;
+  padding: 0 0 0 10px;
+}
+
+#qgroups > ul > li {
+  font-size: 12px;
+  line-height: 20px;
+  color: #233;
+  padding-left: 8px;
+  background: url("//d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png") 0px -364px no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+#qrcode {
+  float: left;
+  text-align: center;
 }
