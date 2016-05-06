@@ -2,7 +2,8 @@
 @import 'mixins';
 
 $logo-imgs: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png");
-$title-imgs: url("//d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png");
+$title-imgs: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png");
+$icon2-imgs: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/icon2.png");
 %secshadow {
 	box-shadow: 0 0 2px 2px #eee;
 }
@@ -327,4 +328,95 @@ nav {
 #qrcode {
 	float: left;
 	text-align: center;
+}
+
+#cream {
+	width: 870px;
+	float: left;
+	margin-right: 20px;
+	padding: 15px 20px;
+	background-color: #fff;
+	margin-top: 20px;
+	> ul > li {
+		border-bottom: #d1d1d1 1px dashed;
+	}
+}
+
+.article {
+	width: 580px;
+	height: 200px;
+	float: left;
+	margin-right: 40px;
+	> h2 {
+		font-weight: normal;
+	}
+	> h2 > a {
+		color: #233;
+	}
+	> h2 > a:hover {
+		color: #7AA6D4;
+	}
+	> p {
+		font-size: 15px;
+		color: #233;
+		line-height: 20px;
+	}
+}
+
+.author-img {
+	> img {
+		height: 60px;
+		width: 60px;
+		float: left;
+		margin-right: 20px;
+	}
+}
+
+.tag {
+	background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/pink-tit.jpg") #d9534f no-repeat right;
+	color: #fff;
+	width: 90px;
+	height: 24px;
+	line-height: 24px;
+	font-size: 14px;
+	vertical-align: middle;
+	text-align: center;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+%spans {
+	padding-left: 25px;
+	line-height: 40px;
+	font-size: 14px;
+	vertical-align: middle;
+	color: #aaa;
+	margin-right: 20px;
+}
+.date {
+	@include background-img($icon2-imgs, 0px 1px, auto, 30px);
+	@extend %spans;
+}
+.read {
+	@include background-img($icon2-imgs, 0px -27px, auto, 30px);
+	@extend %spans;
+}
+.comment {
+	@include background-img($icon2-imgs, 0px -56px, auto, 30px);
+	@extend %spans;
+}
+.collect {
+	@include background-img($icon2-imgs, 0px -84px, auto, 30px);
+	@extend %spans;
+}
+
+.picture {
+	overflow: hidden;
+	> img {
+		border: 2px #fff solid;
+	}
+	> img:hover {
+		border-color: #7AA6D4;
+	}
 }

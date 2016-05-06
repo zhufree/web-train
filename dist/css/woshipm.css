@@ -400,7 +400,7 @@ nav a > img {
   line-height: 20px;
   color: #233;
   padding-left: 8px;
-  background: url("//d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png") 0px -364px no-repeat;
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png") 0px -364px no-repeat;
   height: 100%;
   width: 100%;
 }
@@ -408,4 +408,108 @@ nav a > img {
 #qrcode {
   float: left;
   text-align: center;
+}
+
+#cream {
+  width: 870px;
+  float: left;
+  margin-right: 20px;
+  padding: 15px 20px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+#cream > ul > li {
+  border-bottom: #d1d1d1 1px dashed;
+}
+
+.article {
+  width: 580px;
+  height: 200px;
+  float: left;
+  margin-right: 40px;
+}
+
+.article > h2 {
+  font-weight: normal;
+}
+
+.article > h2 > a {
+  color: #233;
+}
+
+.article > h2 > a:hover {
+  color: #7AA6D4;
+}
+
+.article > p {
+  font-size: 15px;
+  color: #233;
+  line-height: 20px;
+}
+
+.author-img > img {
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin-right: 20px;
+}
+
+.tag {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/pink-tit.jpg") #d9534f no-repeat right;
+  color: #fff;
+  width: 90px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  vertical-align: middle;
+  text-align: center;
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+
+.date, .read, .comment, .collect {
+  padding-left: 25px;
+  line-height: 40px;
+  font-size: 14px;
+  vertical-align: middle;
+  color: #aaa;
+  margin-right: 20px;
+}
+
+.date {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/icon2.png") 0px 1px no-repeat;
+  height: 30px;
+  width: auto;
+}
+
+.read {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/icon2.png") 0px -27px no-repeat;
+  height: 30px;
+  width: auto;
+}
+
+.comment {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/icon2.png") 0px -56px no-repeat;
+  height: 30px;
+  width: auto;
+}
+
+.collect {
+  background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/icon2.png") 0px -84px no-repeat;
+  height: 30px;
+  width: auto;
+}
+
+.picture {
+  overflow: hidden;
+}
+
+.picture > img {
+  border: 2px #fff solid;
+}
+
+.picture > img:hover {
+  border-color: #7AA6D4;
 }
