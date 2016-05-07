@@ -230,9 +230,9 @@ nav {
 }
 
 #join {
-	overflow: hidden;
-	height: 315px;
+	
 	background-color: #fff;
+	height: 315px;
 	@extend %secshadow;
 }
 
@@ -333,18 +333,23 @@ nav {
 #cream {
 	width: 870px;
 	float: left;
-	margin-right: 20px;
-	padding: 15px 20px;
+	margin: 20px 20px 0 0;
+	padding: 15px 20px 30px;
 	background-color: #fff;
-	margin-top: 20px;
+	@extend %secshadow;
+	> ul {
+		display: block;
+	}
 	> ul > li {
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+		overflow: hidden;
 		border-bottom: #d1d1d1 1px dashed;
 	}
 }
 
 .article {
 	width: 580px;
-	height: 200px;
 	float: left;
 	margin-right: 40px;
 	> h2 {
@@ -359,7 +364,6 @@ nav {
 	> p {
 		font-size: 15px;
 		color: #233;
-		line-height: 20px;
 	}
 }
 
@@ -413,10 +417,231 @@ nav {
 
 .picture {
 	overflow: hidden;
-	> img {
+	> a > img {
 		border: 2px #fff solid;
 	}
-	> img:hover {
+	> a > img:hover {
 		border-color: #7AA6D4;
 	}
+}
+
+#see-more {
+	width: 870px;
+	height: 50px;
+	float: left;
+	margin-top: 20px;
+	margin-right: 20px;
+	background-color: #fff;
+	text-align:center;
+	> a {
+		display: block;
+		line-height: 50px;
+		border: 1px #eee solid;
+		color: #233;
+	}
+	> a:hover {
+		border-color: #7AA6D4;
+	}
+}
+
+.right-side {
+	overflow: hidden;
+	> * {
+		background-color: #fff;
+	}
+}
+
+#study {
+	@extend %secshadow;
+	margin-top: 20px;
+	background-color: transparent;
+	> a {
+		display: block;
+		margin-bottom: 20px;
+	}
+}
+
+#hot {
+	@extend %secshadow;
+	> ul {
+		margin: 20px;
+		display: block;
+	}
+	> ul > li {
+		padding-bottom: 10px;
+		margin-bottom: 15px;
+		border-bottom: 1px #eee dashed;
+		overflow: hidden;
+	}
+	> ul > li > p {
+		line-height: 22px;
+		font-size: 14px;
+	}
+	> ul > li > p > a {
+		color: #233;
+	}
+	> ul > li > p > a:hover {
+		color: #7AA6D4;
+	}
+}
+
+.bar {
+	line-height: 40px;
+	padding-left: 20px;
+	font-size: 17px;
+	overflow: hidden;
+	color: #233;
+	border-left: 8px #7AA6D4 solid;
+	border-bottom: 1px #eee solid;
+	> span {
+		font-size: 15px;
+		vertical-align: middle;
+		line-height: 40px;
+		padding-left: 18px;
+	}
+}
+
+.hot-pic {
+	> img {
+		width: 90px;
+		height: 66px;
+		float: left;
+		margin-right: 10px;
+	}
+}
+
+.hot-author {
+	text-decoration: underline;
+}
+
+#authors {
+	text-align: center;
+	@extend %secshadow;
+	> ul {
+		margin: 20px auto;
+		width: 285px;
+		display: block;
+		overflow: hidden;
+	}
+	> ul > li {
+		float: left;
+		margin-right: 15px;
+	}
+	> ul > li > a > img {
+		width: 60px;
+		height: 60px;
+	}
+	> ul > li > a > p {
+		line-height: 3em;
+		color: #233;
+	}
+	> ul > li > a > p:hover {
+		color: #7AA6D4;
+	}
+}
+.forth {
+	margin-right: 0 !important;
+}
+.prev {
+	@include background-img($title-imgs, 0 -75px, 10px, 10px);
+	margin-left: 160px;
+}
+.next {
+	@include background-img($title-imgs, -19px -54px, 10px, 10px);
+	margin-left: 2px;
+}
+
+#rank {
+	@extend %secshadow;
+	> ul {
+		margin: 15px;
+		overflow:hidden; 
+	}
+	> ul > li > p {
+		margin-bottom: 5px;
+		font-size: 16px;
+		text-overflow:ellipsis; 
+		overflow:hidden; 
+		white-space:nowrap; 
+	}
+	> ul > li > p > a {
+		color: #233;
+	}
+	> ul > li > p > a:hover {
+		color: #6781a5;
+	}
+}
+.day {
+	font-size: 12px;
+	line-height: 14px;
+	margin: 10px 5px;
+	background-color: #fff;
+	color: #7AA6D4;
+	border: 1px #7AA6D4 solid;
+	padding: 3px 6px;
+	float: right;
+}
+.day:first-child {
+	margin-right: 10px;
+}
+.day:hover {
+	color: #fff;
+	background-color: #7AA6D4;
+}
+
+.no {
+	display: block;
+	float: left;
+	width: 20px;
+	height: 20px;
+	font-size: 14px;
+	text-align: center;
+	color: #fff;
+	background-color: #A6C6E6;
+	margin-right: 5px;
+}
+
+.three {
+	background-color: #6781a5;
+}
+
+#books {
+	@extend %secshadow;
+	> ul {
+		margin: 0 20px 20px 20px;
+		overflow: hidden;
+	}
+	> ul > li {
+		overflow: hidden;
+		padding: 15px 0;
+		border-bottom: 1px #eee dashed;
+	}
+	> ul > li > h4 {
+		font-weight: normal;
+		font-size: 18px;
+	}
+	> ul > li > h4 > a {
+		color: #233;
+	}
+	> ul > li > h4 > a:hover {
+		color: #7AA6D4;
+	}
+	> ul > li > p {
+		font-size: 14px;
+		color: #777;
+	}
+}
+
+.book-img{
+	margin-right: 20px;
+	float: left;
+}
+.preqt {
+	@include background-img($title-imgs, 0px -99px, 20px, 15px);
+	padding: 0 10px;
+	float: left;
+}
+.endqt {
+	@include background-img($title-imgs, 3px -132px, 20px, 15px);
+	padding: 0 10px;
 }
