@@ -4,21 +4,32 @@
 $logo-imgs: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png");
 $title-imgs: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png");
 $icon2-imgs: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/icon2.png");
+$side-pole: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/f-fg.jpg");
+
+$darker-blue: #58749C;
+$dark-blue: #6781A4;
+$light-blue: #7AA6D4;
+$lighter-blue: #A6C6E6;
+
+$font-color: #233;
+
 %secshadow {
 	box-shadow: 0 0 2px 2px #eee;
 }
 
 body {
 	background-color: #F3F3F3;
-	min-height: 800px;
 	font-size: 14px;
 
 }
 
 nav {
-	@include navstyle(70px, #58749C);
-	box-shadow: 0 1px 1px 1px #ccc;
+	@include navstyle(70px, $darker-blue);
+	box-shadow: 0 0px 1px 1px #eee;
 	padding: 0 40px;
+	width: 100%;
+	position: fixed;
+	top: 0;
 	> a, #menu > ul > li > a, > div > a {
 		line-height: 70px;
 		float: left;
@@ -48,7 +59,7 @@ nav {
 		padding: 0 20px;
 	}
 	> ul > li > a:hover {
-		background-color: #6781A4;
+		background-color: $dark-blue;
 		border-bottom: #fff solid 3px;
 	}
 }
@@ -63,11 +74,11 @@ nav {
 #search {
 	float: right;
 	> a {
-		@include background-img(url(http://d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png), 10px -247px, 40px, 70px);
+		@include background-img($title-imgs, 10px -247px, 40px, 70px);
 		padding: 0 10px;
 	}
 	> a:hover {
-		background-color: #6781A4;
+		background-color: $dark-blue;
 	}
 }
 
@@ -77,7 +88,7 @@ nav {
 		padding: 0 10px;
 	}
 	> a:hover {
-		background-color: #6781A4;
+		background-color: $dark-blue;
 	}
 	img {
 		border-radius: 50%;
@@ -88,7 +99,7 @@ nav {
 	background-color: #fff;
 	position: absolute;
 	margin-top: 70px;
-	border: 2px #6781A4 solid;
+	border: 2px $dark-blue solid;
 	display: block;
 	padding: 10px;
 }
@@ -101,10 +112,10 @@ nav {
 		font-size: 17px;
 	}
 	> li > a {
-		color: #233;
+		color: $font-color;
 	}
 	> li > a:hover {
-		color: #6781A4;
+		color: $dark-blue;
 	}
 }
 
@@ -125,7 +136,7 @@ nav {
 		padding-bottom :10px;
 	}
 	> li >p > a:first-child {
-		color: #233;
+		color: $font-color;
 	}
 }
 
@@ -148,11 +159,11 @@ nav {
 	> a {
 		padding: 5px 20px;
 		background-color: #d8e3f2;
-		color: #6781a5;
+		color: $dark-blue;
 		line-height: 30px;
 	}
 	> a:hover {
-		background-color: #6781a5;
+		background-color: $dark-blue;
 		color: #fff;
 	}
 }
@@ -161,7 +172,7 @@ nav {
 	position: absolute;
 	margin-top: 70px;
 	margin-left: -40px;
-	background-color: #6781a5;
+	background-color: $dark-blue;
 	display: none;
 	text-align: center;
 	width: 115px;
@@ -177,25 +188,25 @@ nav {
 		border-bottom: 1px #aaa solid;
 	}
 	> li > a:hover {
-		background-color: #7AA6D4;
+		background-color: $light-blue;
 	}
 }
 
 .container {
 	width: 1202px;
-	margin: 50px auto;
+	margin: 100px auto;
 }
 
 #recommend {
-	width: 870px;
+	width: 873px;
 	float: left;
 	margin-right: 20px;
+	background-color: #fff;
+	padding: 30px 30px;
+	@extend %secshadow;
 	> ul {
-		display: block;
-		height: 315px;
-		background-color: #fff;
-		@extend %secshadow;
-		padding: 30px 30px;
+		height: 300px;
+		overflow: hidden;
 	}
 	> ul > li {
 		float: left;
@@ -206,9 +217,9 @@ nav {
 		border: 2px #fff solid;
 	}
 	> ul > li > a > img:hover {
-		border: 2px #7AA6D4 solid;
+		border: 2px $light-blue solid;
 	}
-	> ul > li:last-child {
+	.no-right-margin {
 		margin-right: 0;
 	}
 	h4 {
@@ -222,15 +233,41 @@ nav {
 		color: #000;
 	}
 	h4 > a:hover {
-		color: #6781a5;
+		color: $dark-blue;
 	}
 	p {
 		font-size: 15px;
 	}
 }
 
+.hide {
+	display: none;
+}
+.no-right-margin {
+		margin-right: 0;
+}
+.dots {
+	width: 100px;
+	margin: -20px auto;
+	// position: relative;
+	// top: 20px;
+	// left: -50px;
+}
+.dot {
+	display: block;
+	float: left;
+	cursor: pointer;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	border: 1px #ccc solid;
+	margin-right: 18px;	
+}
+.dot:hover,.on {
+	background-color: $dark-blue;
+}
+
 #join {
-	
 	background-color: #fff;
 	height: 315px;
 	@extend %secshadow;
@@ -240,7 +277,7 @@ nav {
 	width: 130px;
 	height: 40px;
 	margin: 0 auto;
-	background-color: #7AA6D4;
+	background-color: $light-blue;
 	color: #fff;
 	> p {
 		line-height: 40px;
@@ -253,8 +290,8 @@ nav {
 	margin: 10px auto;
 	padding: 20px 0;
 	height: 85px;
-	border-top: #7AA6D4 1px dashed;
-	border-bottom: #7AA6D4 1px dashed;
+	border-top: $light-blue 1px dashed;
+	border-bottom: $light-blue 1px dashed;
 	> a {
 		float: left;
 		margin-right: 15px;
@@ -320,7 +357,7 @@ nav {
 	> ul > li{
 		font-size: 12px;
 		line-height: 20px;
-		color: #233;
+		color: $font-color;
 		padding-left: 8px;
 		@include background-img($title-imgs, 0px -364px,100%,100%);
 	}
@@ -356,14 +393,14 @@ nav {
 		font-weight: normal;
 	}
 	> h2 > a {
-		color: #233;
+		color: $font-color;
 	}
 	> h2 > a:hover {
-		color: #7AA6D4;
+		color: $light-blue;
 	}
 	> p {
 		font-size: 15px;
-		color: #233;
+		color: $font-color;
 	}
 }
 
@@ -421,7 +458,7 @@ nav {
 		border: 2px #fff solid;
 	}
 	> a > img:hover {
-		border-color: #7AA6D4;
+		border-color: $light-blue;
 	}
 }
 
@@ -437,10 +474,10 @@ nav {
 		display: block;
 		line-height: 50px;
 		border: 1px #eee solid;
-		color: #233;
+		color: $font-color;
 	}
 	> a:hover {
-		border-color: #7AA6D4;
+		border-color: $light-blue;
 	}
 }
 
@@ -478,10 +515,10 @@ nav {
 		font-size: 14px;
 	}
 	> ul > li > p > a {
-		color: #233;
+		color: $font-color;
 	}
 	> ul > li > p > a:hover {
-		color: #7AA6D4;
+		color: $light-blue;
 	}
 }
 
@@ -490,8 +527,8 @@ nav {
 	padding-left: 20px;
 	font-size: 17px;
 	overflow: hidden;
-	color: #233;
-	border-left: 8px #7AA6D4 solid;
+	color: $font-color;
+	border-left: 8px $light-blue solid;
 	border-bottom: 1px #eee solid;
 	> span {
 		font-size: 15px;
@@ -520,7 +557,6 @@ nav {
 	> ul {
 		margin: 20px auto;
 		width: 285px;
-		display: block;
 		overflow: hidden;
 	}
 	> ul > li {
@@ -533,10 +569,10 @@ nav {
 	}
 	> ul > li > a > p {
 		line-height: 3em;
-		color: #233;
+		color: $font-color;
 	}
 	> ul > li > a > p:hover {
-		color: #7AA6D4;
+		color: $light-blue;
 	}
 }
 .forth {
@@ -565,10 +601,10 @@ nav {
 		white-space:nowrap; 
 	}
 	> ul > li > p > a {
-		color: #233;
+		color: $font-color;
 	}
 	> ul > li > p > a:hover {
-		color: #6781a5;
+		color: $dark-blue;
 	}
 }
 .day {
@@ -576,8 +612,8 @@ nav {
 	line-height: 14px;
 	margin: 10px 5px;
 	background-color: #fff;
-	color: #7AA6D4;
-	border: 1px #7AA6D4 solid;
+	color: $light-blue;
+	border: 1px $light-blue solid;
 	padding: 3px 6px;
 	float: right;
 }
@@ -586,7 +622,7 @@ nav {
 }
 .day:hover {
 	color: #fff;
-	background-color: #7AA6D4;
+	background-color: $light-blue;
 }
 
 .no {
@@ -597,12 +633,12 @@ nav {
 	font-size: 14px;
 	text-align: center;
 	color: #fff;
-	background-color: #A6C6E6;
+	background-color: $lighter-blue;
 	margin-right: 5px;
 }
 
 .three {
-	background-color: #6781a5;
+	background-color: $dark-blue;
 }
 
 #books {
@@ -621,10 +657,10 @@ nav {
 		font-size: 18px;
 	}
 	> ul > li > h4 > a {
-		color: #233;
+		color: $font-color;
 	}
 	> ul > li > h4 > a:hover {
-		color: #7AA6D4;
+		color: $light-blue;
 	}
 	> ul > li > p {
 		font-size: 14px;
@@ -644,4 +680,134 @@ nav {
 .endqt {
 	@include background-img($title-imgs, 3px -132px, 20px, 15px);
 	padding: 0 10px;
+}
+
+#friends {
+	background-color: $darker-blue;
+	padding: 20px 30px;
+	margin-top: 120px;
+	overflow: hidden;
+}
+
+#partner, #links {
+	> h3 {
+		padding-left: 36px;
+		color: #fff;
+		font-weight: normal;
+		font-size: 17px;
+		margin: 20px 0; 
+	}
+}
+#partner > h3 {
+	@include background-img($title-imgs, 0 -163px, 100%, 26px);
+}
+#links > h3 {
+	@include background-img($title-imgs, 0 -207px, 100%, 26px);
+}
+
+#brands {
+	display: block;
+	overflow: hidden;
+	> li {
+		float: left;
+		margin-right: 25px;
+	}
+}
+
+#links {
+	display: block;
+	> ul > li {
+		float: left;
+		width: 133px;
+	}
+	> ul > li > ul > li {
+		height: 30px;
+	}
+	> ul > li > ul > li > a {
+		color: #ccc;
+	}
+	> ul > li > ul > li > a:hover {
+		color: #fff;
+	}
+}
+
+footer {
+	background-color: #383838;
+	padding: 30px;
+}
+
+#about {
+	float: left;
+	text-align: center;
+	padding-right: 70px;
+	@include background-img($side-pole, right, 280px, auto);
+	> ul {
+		margin-top: 20px;
+	}
+	> ul > li {
+		text-align: center;
+		float: left;
+		width: 105px;
+		height: 40px;
+	}
+	> ul > li > a {
+		text-align: center;
+		color: #fff;
+		font-size: 16px;
+	}
+}
+
+#sub-app {
+	float: right;
+	padding-left: 60px;
+}
+#intro {
+	overflow: hidden;
+	padding: 0 30px;
+	@include background-img($side-pole, right, auto, auto);
+	> p {
+		color: #fff;
+		font-size: 16px;
+		line-height: 35px;
+	}
+}
+
+#copyright {
+	background-color: #fff;
+	height: 70px;
+	text-align: center;
+	> p {
+		font-size: 16px;
+		color: $font-color;
+		line-height: 70px;
+	}
+}
+
+#top {
+	position: fixed;
+	top: 80%;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	background-color: $darker-blue;
+	@extend %secshadow;
+	cursor: pointer;
+}
+
+#s {
+	display: block;
+	width: 0;
+	margin: 5px auto 0;
+	border-bottom: 15px solid #fff; 
+	border-left: 10px solid transparent; 
+	border-right: 10px solid transparent; 
+}
+
+#x {
+	width: 10px;
+	height: 15px;
+	display: block;
+	margin: 0 auto;
+	background-color: #fff;
 }
