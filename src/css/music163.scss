@@ -1,0 +1,523 @@
+@import 'public';
+@import 'mixins';
+
+//colors
+//change to gradient later;
+$nav-black: #252525;
+$hover-black: #3C3B37;
+$nav-red: #C10D0C;
+$subnav-hover-red: #8E0303;
+$radio-red: #CC0000;
+//text color
+$nav-text-color: #ccc;
+$nav-user-color: #d3d3d3;
+$subnav-text-color: #fff;
+$down-text-color: #8d8d8d;
+$title-text-color: #333;
+$type-text-color: #666;
+$cdname-text-color: #000;
+$reason-text-color: #999;
+$about-text-color: #9b9b9b;
+
+//text-size:
+$min-size: 12px;
+$small-size: 14px;
+$big-size: 20px;
+
+//img-urls
+$topbar-img: url(http://s2.music.126.net/style/web2/img/frame/topbar.png);
+// $small-head: url(http://p3.music.126.net/ZWJv3PBX0FpLQnEzx-V3Iw==/7781243789797372.jpg);
+$download-img: url(http://s2.music.126.net/style/web2/img/index/download.png);
+$icon-img: url(http://s2.music.126.net/style/web2/img/icon.png);
+$iconall-img: url(http://s2.music.126.net/style/web2/img/iconall.png);
+$date-img: url(http://s2.music.126.net/style/web2/img/date.png);
+$index-img: url(http://s2.music.126.net/style/web2/img/index/index.png);
+$coverall-img: url(http://s2.music.126.net/style/web2/img/coverall.png);
+$sprite-img: url(http://s2.music.126.net/style/web2/img/sprite.png);
+
+%ellipsis{
+	text-overflow:ellipsis; 
+	overflow:hidden; 
+	white-space:nowrap; 
+}
+
+body {
+	background-color: #f5f5f5;
+}
+.nav {
+	background-color: $nav-black;
+	height: 70px;
+	padding: 0 150px;
+	overflow: hidden;
+	> ul {
+		float: left;
+		overflow: hidden;
+	}
+	> ul > li {
+		float: left;
+	}
+	> ul > li > a {
+		padding: 0 25px;
+		line-height: 70px;
+		font-size: $small-size;
+		color: $nav-text-color;
+	}
+	> ul > li:hover {
+		background-color: $hover-black;
+	}
+}
+
+.brand {
+	@include background-img($topbar-img, 0 15px, 157px, 70px);
+	padding: 22px 18px 0 0;
+	float: left;
+}
+
+#search {
+	float: left;
+	line-height: 70px;
+	margin-left: 20px;
+	> input {
+		padding-left: 30px;
+		border-radius: 50px;
+		vertical-align: middle;
+		border: none;
+		@include background-img($topbar-img, 0 -550px, 210px, 31px);
+		display: inline;
+		color: $about-text-color;
+		font-size: $min-size;
+	}
+}
+.userctrl {
+	float: right;
+	overflow: hidden;
+	line-height: 70px;
+	> a > img {
+		vertical-align: middle;
+		width: 30px;
+		height: 30px;
+		border-radius: 5px;
+	}
+	p {
+		font-size: $min-size;
+		color: $nav-user-color;
+	}
+}
+
+.notice {
+	@include background-img($topbar-img, -60px -49px, 34px, 28px);
+	display: block;
+	float: left;
+	margin: 18px 20px 0 0;
+}
+
+.name {
+	display: block;
+	float: right;
+	margin-left: 10px;
+	line-height: 70px;
+	> p {
+		vertical-align: middle;
+	}
+}
+
+#dropdown-icon {
+	@include background-img($topbar-img, right -366px, 15px, 45px);
+	padding-right: 18px;
+	position: absolute;
+	margin-top: -50px;
+	margin-left: 40px;
+}
+
+.subtabs {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	background-color: $nav-red;
+	> ul {
+		width: 600px;
+		margin: 0 auto;
+	}
+	> ul > li {
+		display: block;
+		float: left;
+		font-size: $small-size;
+		margin-right: 20px;
+		overflow: hidden;
+		line-height: 37px;
+	}
+	> ul > li > a {
+		vertical-align: middle;
+		padding: 2px 10px;
+		border-radius: 12px;
+		color: $subnav-text-color;
+	}
+	> ul > li > a:hover, .hover {
+		background-color: $subnav-hover-red;
+	}
+}
+
+.wrap {
+	width: 100%;
+	overflow: hidden;
+	margin: 40px auto;
+	background: url(http://p4.music.126.net/hBpodpn1W87K_z55ooG86Q==/1408474404151922.jpg) 0 0 repeat-x;
+}
+.banner {
+	position: relative;
+	width: 982px;
+	margin: 0 auto;
+	> img {
+		// width: 100%;
+		float: left;
+	}
+}
+
+#download {
+	@include background-img($download-img, 0 0, 254px, 336px);
+	position: absolute;
+	top: 0;
+	right: 0;
+	> button {
+		margin: 212px 0 0 19px;
+		border: none;
+		@include background-img($download-img, 0 60px, 254px, 56px);
+	}
+	> button:hover {
+		@include background-img($download-img, 0 -340px, 254px, 56px);
+	}
+	> p {
+		font-size: $min-size;
+		color: $down-text-color;
+		text-align: center;
+		margin-top: 5px;
+	}
+}
+
+.container {
+	width: 980px;
+	margin: 0 auto;
+	border: 1px #ccc solid;
+	border-bottom: none;
+	overflow: hidden;
+}
+
+hr {
+	border: 1px solid $nav-red;
+}
+
+.recommends {
+	background-color: #fff;
+	border-right: 1px #ccc solid;
+	width: 729px;
+	float: left;
+	padding: 20px;
+}
+
+.red-dot {
+	float: left;
+	@include background-img($index-img, -225px -156px, 33px, 27px);
+}
+.title {
+	color: $title-text-color;
+	font-size: $big-size;
+}
+#hot > .title,#new-cd > .title,#rank > .title {
+	float: left;
+	width: 100px;
+}
+.type {
+	overflow: hidden;
+	color: $type-text-color;
+	font-size: $min-size;
+	> li {
+		float: left;
+	}
+	> li > a {
+		color: $type-text-color;
+		line-height: 27px;
+		padding: 0 10px;
+		vertical-align: middle;
+		// border-right: 1px #777 solid;
+	}
+	> li:last-child {
+		float: right;
+	}
+	> li:last-child > a > span {
+		float: right;
+		margin-top: 8px;
+		margin-left: -4px;
+		@include background-img($index-img, 0 -240px, 12px, 12px);
+	}
+}
+
+.lists {
+	overflow: hidden;
+	padding-top: 20px;
+	> li {
+		float: left;
+		width: 142px;
+		height: 230px;
+		margin-right: 40px;
+	}
+	> li.no-right-margin {
+		margin: 0;
+	}
+}
+
+.cover {
+	background-color: #333;
+	opacity: 0.5;
+	height: 30px;
+	width: 140px;
+	position: absolute;
+	margin-top: -35px;
+	> span {
+		display: block;
+		float: left;
+	}
+	> span:last-child {
+		float: right;
+	}
+}
+.listen {
+	@include background-img($iconall-img, 0 -24px, 14px, 11px);
+	margin: 9px 5px 9px 10px;
+}
+.count {
+	font-size: $min-size;
+	color: $nav-user-color;
+	margin: 7px auto;
+}
+.play-btn {
+	@include background-img($iconall-img, 0 0, 16px, 17px);
+	margin: 7px 10px 7px 0;
+}
+
+.list-name {
+	color: $cdname-text-color;
+	font-size: $small-size;
+	line-height: 18px;
+	display: block;
+	&:hover {
+		text-decoration: underline !important;
+	}
+}
+
+.reason {
+	font-size: $min-size;
+	color: $reason-text-color;
+}
+
+.everyday {
+	@include background-img($date-img, 0 0, 140px, 140px);
+}
+
+.week {
+	display: block;
+	height: 33px;
+	color: #fed9d9;
+	text-align: center;
+	font-size: $small-size;
+	line-height: 33px;
+	border-radius: 10px 10px 0 0 ;
+}
+
+.ad {
+	margin: 20px auto;
+}
+
+.day-back {
+	display: block;
+	font-size: 80px;
+	text-align: center;
+	@include background-img($date-img, 0 -150px, 142px, 107px);
+}
+
+#new-cd {
+	margin-bottom: 20px;
+	> ul.lists {
+		margin-top: 20px;
+		padding: 30px 5px;
+		background-color: #eee;
+		border: #ccc 1px solid;
+	}
+	> ul.lists > li {
+		margin-left: 11px;
+		margin-right: 0;
+		@include background-img($coverall-img, 0 -570px, 118px, 142px);
+	}
+	> ul.lists > li.no-left-margin {
+		margin: 0;
+	}
+}
+.cd-name, .cd-author {
+	font-size: $min-size;
+	display: block;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+.cd-name {
+	color: $cdname-text-color;
+}
+.cd-author {
+	color :$reason-text-color;
+}
+
+.prev {
+	@include background-img($index-img, -260px -75px, 17px, 17px);
+	display: block;
+	float: left;
+	margin-top: 50px;
+	&:hover {
+		@include background-img($index-img, -280px -75px, 17px, 17px);
+	}
+}
+.next {
+	@include background-img($index-img, -300px -75px, 17px, 17px);
+	display: block;
+	float: right;
+	margin-top: 50px;
+	&:hover {
+		@include background-img($index-img, -320px -75px, 17px, 17px);
+	}
+}
+
+.rank-lists {
+	width: 689px;
+	margin: 20px auto;
+	background-color: #eee;
+	border: #ccc 1px solid;
+	overflow: hidden;
+	> li {
+		width: 229px;
+		float: left;
+		border-right: #ccc 1px solid;
+		overflow: hidden;
+	}
+}
+.rank-type {
+	padding: 20px;
+	overflow: hidden;
+	> img {
+		float: left;
+		width: 80px;
+		height: 80px;
+		margin-right: 10px;
+	}
+	> a {
+		font-size: 15px;
+		font-weight: bold;
+		line-height: 20px;
+		color: $cdname-text-color;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	> span {
+		display: block;
+		position: absolute;
+	}
+	> span.play-btn {
+		margin-left: 90px;
+		@include background-img($index-img, -267px -205px, 22px, 22px);
+	}
+	> span.col-btn {
+		margin: 6px 125px;
+		@include background-img($index-img, -300px -205px, 22px, 22px);
+	}
+}
+
+.rank-list {
+	> ul > li {
+		height: 30px;
+		padding-left: 30px;
+	}
+	> ul > li:nth-child(even){
+		background-color: #E8E8E8;
+	}
+	> ul > li > a {
+		font-size: $min-size;
+		color: $cdname-text-color;
+		&:hover {
+			text-decoration: underline;
+		}
+		@extend %ellipsis;
+	}
+	> ul > li:last-child > a {
+		float: right;
+		vertical-align: middle;
+		line-height: 30px;
+		margin-right: 10px;
+	}
+	.no {
+		font-size: 18px;
+		color: #555;
+		padding: 5px;
+	}
+	.red {
+		color: $nav-red;
+	}
+	&:last-child {
+		border: none;
+	}
+}
+
+.footer {
+	background-color: #F9F9F9;
+	border-top: #ccc 1px solid;
+	height: 150px;
+}
+
+.plans {
+	width: 980px;
+	margin: 40px auto;
+}
+
+.single-singer, .music-art {
+	width: 300px;
+	float: left;
+	> a {
+		padding-left: 50px;
+		line-height: 20px;
+	}
+	> a > p {
+		font-size: $min-size;
+		color: #555;
+	}
+	> a > p:last-child {
+		color: #aaa;
+	}
+}
+.single-singer {
+	> a {
+		@include background-img($sprite-img, -400px -80px, 247px, 46px);
+	}
+}
+.music-art {
+	> a {
+		@include background-img($sprite-img, -400px -125px, 247px, 46px);
+	}
+}
+.about {
+	overflow: hidden;
+	font-size: $min-size;
+	color: #555;
+	line-height: 20px;
+	> a {
+		font-size: $min-size;
+		color: #555;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+#suggestion {
+	float: right;
+	> span {
+		float: left;
+		@include background-img($icon-img, 0 -39px, 19px, 16px);
+	}
+}

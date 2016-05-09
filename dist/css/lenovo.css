@@ -41,6 +41,7 @@ nav .right {
 }
 
 nav span {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -185px -201px no-repeat;
   height: 19px;
   width: 19px;
@@ -60,6 +61,7 @@ nav span {
 }
 
 .search-box div {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -4px -363px no-repeat;
   height: 37px;
   width: 189px;
@@ -81,6 +83,7 @@ nav span {
 
 .search-box .btn {
   float: right;
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/76/CmBZEFZWvNiAUa4zAAAGUlPCg-4527.jpg) 0 no-repeat;
   height: 37px;
   width: 61px;
@@ -120,12 +123,14 @@ nav span {
 }
 
 #tabs #new {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -275px -198px no-repeat;
   height: 21px;
   width: 332px;
 }
 
 #tabs #hot {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -268px -3px no-repeat;
   height: 21px;
   width: 332px;
@@ -358,24 +363,28 @@ nav span {
 }
 
 #previous {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -143px -31px no-repeat;
   height: 18px;
   width: 18px;
 }
 
 #next {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -117px -31px no-repeat;
   height: 18px;
   width: 18px;
 }
 
 #change {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -96px -34px no-repeat;
   height: 18px;
   width: 18px;
 }
 
 .more {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -12px -433px no-repeat;
   height: 16px;
   width: 50px;
@@ -430,6 +439,7 @@ nav span {
 }
 
 #social {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -170px -72px no-repeat;
   height: 22px;
   width: 44px;
@@ -437,6 +447,7 @@ nav span {
 }
 
 #wechat {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -227px -67px no-repeat;
   height: 34px;
   width: 37px;
@@ -444,6 +455,7 @@ nav span {
 }
 
 #qzone {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -170px -106px no-repeat;
   height: 32px;
   width: 36px;
@@ -451,6 +463,7 @@ nav span {
 }
 
 #tieba {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -220px -109px no-repeat;
   height: 28px;
   width: 28px;
@@ -458,6 +471,7 @@ nav span {
 }
 
 #weibo {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -264px -107px no-repeat;
   height: 30px;
   width: 37px;
@@ -465,6 +479,7 @@ nav span {
 }
 
 #blog {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -276px -67px no-repeat;
   height: 27px;
   width: 32px;
@@ -527,12 +542,14 @@ footer a > span {
 }
 
 #sale-point {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -234px -3px no-repeat;
   height: 13px;
   width: 10px;
 }
 
 #service-point {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -248px -3px no-repeat;
   height: 13px;
   width: 10px;
@@ -554,12 +571,14 @@ aside span {
 
 .qrcode {
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -88px -592px no-repeat;
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -88px -592px no-repeat;
   height: 76px;
   width: 76px;
 }
 
 .right-btn {
+  display: block;
   background: url(http://pic.shop.lenovo.com.cn/g1/M00/00/F0/CmBZD1ZynUyAUnWjAAGn0mxLsoI703.png) -328px -476px no-repeat;
   height: 36px;
   width: 16px;

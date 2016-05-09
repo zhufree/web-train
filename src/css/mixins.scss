@@ -47,6 +47,7 @@
 
 //background img
 @mixin background-img($back-url, $back-pos, $width, $height) {
+    display: block;
     background: $back-url $back-pos no-repeat;
     height: $height;
     width: $width;

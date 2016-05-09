@@ -78,7 +78,6 @@ nav a > img {
 }
 
 #search > a {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png") 10px -247px no-repeat;
   height: 70px;
   width: 40px;
@@ -342,7 +341,6 @@ nav a > img {
 }
 
 #wechat {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") 0px 0px no-repeat;
   height: 45px;
   width: 45px;
@@ -356,7 +354,6 @@ nav a > img {
 }
 
 #wechat:hover {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") 0px -75px no-repeat;
   height: 45px;
   width: 45px;
@@ -367,56 +364,48 @@ nav a > img {
 }
 
 #sina {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -57px 0px no-repeat;
   height: 45px;
   width: 45px;
 }
 
 #sina:hover {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -57px -75px no-repeat;
   height: 45px;
   width: 45px;
 }
 
 #txweibo {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -114px 0px no-repeat;
   height: 45px;
   width: 45px;
 }
 
 #txweibo:hover {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -114px -75px no-repeat;
   height: 45px;
   width: 45px;
 }
 
 #feed {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -170px 0px no-repeat;
   height: 45px;
   width: 45px;
 }
 
 #feed:hover {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -170px -75px no-repeat;
   height: 45px;
   width: 45px;
 }
 
 #qq {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -227px 0px no-repeat;
   height: 45px;
   width: 45px;
 }
 
 #qq:hover {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/app-icon.png") -227px -75px no-repeat;
   height: 45px;
   width: 45px;
@@ -440,7 +429,6 @@ nav a > img {
   line-height: 20px;
   color: #233;
   padding-left: 8px;
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png") 0px -364px no-repeat;
   height: 100%;
   width: 100%;
@@ -524,28 +512,24 @@ nav a > img {
 }
 
 .date {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/icon2.png") 0px 1px no-repeat;
   height: 30px;
   width: auto;
 }
 
 .read {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/icon2.png") 0px -27px no-repeat;
   height: 30px;
   width: auto;
 }
 
 .comment {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/icon2.png") 0px -56px no-repeat;
   height: 30px;
   width: auto;
 }
 
 .collect {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/icon2.png") 0px -84px no-repeat;
   height: 30px;
   width: auto;
@@ -689,7 +673,6 @@ nav a > img {
 }
 
 .prev {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png") 0 -75px no-repeat;
   height: 10px;
   width: 10px;
@@ -697,7 +680,6 @@ nav a > img {
 }
 
 .next {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png") -19px -54px no-repeat;
   height: 10px;
   width: 10px;
@@ -796,7 +778,6 @@ nav a > img {
 }
 
 .preqt {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png") 0px -99px no-repeat;
   height: 15px;
   width: 20px;
@@ -805,7 +786,6 @@ nav a > img {
 }
 
 .endqt {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png") 3px -132px no-repeat;
   height: 15px;
   width: 20px;
@@ -828,14 +808,12 @@ nav a > img {
 }
 
 #partner > h3 {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png") 0 -163px no-repeat;
   height: 26px;
   width: 100%;
 }
 
 #links > h3 {
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/title.png") 0 -207px no-repeat;
   height: 26px;
   width: 100%;
@@ -881,7 +859,6 @@ footer {
   float: left;
   text-align: center;
   padding-right: 70px;
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/f-fg.jpg") right no-repeat;
   height: auto;
   width: 280px;
@@ -912,7 +889,6 @@ footer {
 #intro {
   overflow: hidden;
   padding: 0 30px;
-  display: block;
   background: url("http://d.woshipm.com/wp-files/themes/woshipm-2015/images/f-fg.jpg") right no-repeat;
   height: auto;
   width: auto;
