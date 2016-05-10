@@ -29,6 +29,7 @@ $topbar-img: url(http://s2.music.126.net/style/web2/img/frame/topbar.png);
 // $small-head: url(http://p3.music.126.net/ZWJv3PBX0FpLQnEzx-V3Iw==/7781243789797372.jpg);
 $download-img: url(http://s2.music.126.net/style/web2/img/index/download.png);
 $icon-img: url(http://s2.music.126.net/style/web2/img/icon.png);
+$icon2-img: url(http://s2.music.126.net/style/web2/img/icon2.png);
 $iconall-img: url(http://s2.music.126.net/style/web2/img/iconall.png);
 $date-img: url(http://s2.music.126.net/style/web2/img/date.png);
 $index-img: url(http://s2.music.126.net/style/web2/img/index/index.png);
@@ -41,6 +42,11 @@ $sprite-img: url(http://s2.music.126.net/style/web2/img/sprite.png);
 	white-space:nowrap; 
 }
 
+%underline-link {
+	&:hover {
+		text-decoration: underline;
+	}
+}
 body {
 	background-color: #f5f5f5;
 }
@@ -300,9 +306,7 @@ hr {
 	font-size: $small-size;
 	line-height: 18px;
 	display: block;
-	&:hover {
-		text-decoration: underline !important;
-	}
+	@extend %underline-link;
 }
 
 .reason {
@@ -355,9 +359,7 @@ hr {
 .cd-name, .cd-author {
 	font-size: $min-size;
 	display: block;
-	&:hover {
-		text-decoration: underline;
-	}
+	@extend %underline-link;
 }
 .cd-name {
 	color: $cdname-text-color;
@@ -412,9 +414,7 @@ hr {
 		font-weight: bold;
 		line-height: 20px;
 		color: $cdname-text-color;
-		&:hover {
-			text-decoration: underline;
-		}
+		@extend %underline-link;
 	}
 	> span {
 		display: block;
@@ -441,9 +441,7 @@ hr {
 	> ul > li > a {
 		font-size: $min-size;
 		color: $cdname-text-color;
-		&:hover {
-			text-decoration: underline;
-		}
+		@extend %underline-link;
 		@extend %ellipsis;
 	}
 	> ul > li:last-child > a {
@@ -509,9 +507,7 @@ hr {
 	> a {
 		font-size: $min-size;
 		color: #555;
-		&:hover {
-			text-decoration: underline;
-		}
+		@extend %underline-link;
 	}
 }
 #suggestion {
@@ -520,4 +516,167 @@ hr {
 		float: left;
 		@include background-img($icon-img, 0 -39px, 19px, 16px);
 	}
+}
+
+.right-side {
+	overflow: hidden;
+	background-color: #fff;
+	height: 1744px;
+}
+.user-info {
+	padding: 20px;
+	overflow: hidden;
+	background-color: #F6F6F6;
+	border-bottom: 1px solid #ccc;
+	> img {
+		float: left;
+		margin-right: 20px;
+		background-color: #fff;
+		padding: 2px;
+		border: 1px #ccc solid;
+	}
+	> ul {
+		overflow: hidden;
+		float: left;
+		margin-top: 20px;
+	}
+	> ul > li {
+		float: left;
+		width: 68px;
+		padding: 0 19px;
+		border-right: 1px #ccc solid;
+	}
+	> ul > li:last-child {
+		border:none;
+	}
+	> ul > li > span {
+		font-size: $small-size;
+		color: #555;
+		line-height: 20px;
+		&:hover {
+			color: #3880cc;
+		}
+	}
+	> ul > li > span:first-child {
+		font-size: $big-size;
+	}
+}
+.user-name {
+	font-size: $small-size;
+	color: $cdname-text-color;
+	@extend %underline-link;
+}
+.user-level {
+	@include background-img($icon2-img, -130px -64px, auto, 17px);
+	padding-left: 25px;
+	margin-left: 100px;
+	font-size: 13px;
+	font-style :italic;
+}
+.sign {
+	width: 100px;
+	height: 30px;
+	background-color: #3080CC;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+
+.singers {
+	padding: 20px;
+	overflow: hidden;
+	> h4.title {
+		float: left;
+		font-size: $small-size;
+		font-weight: bold;
+		width: 100px;
+	}
+	> hr {
+		border: none;
+		border-top: 1px solid #ccc;
+	}
+	> ul {
+		margin-top: 20px;
+	}
+	> button {
+		width: 100%;
+		height: 35px;
+		font-size: $min-size;
+		font-weight: bold;
+	}
+}
+.singer {
+	background-color: #FAFAFA;
+	height: 62px;
+	margin-bottom: 20px;
+	&:hover {
+		background-color: #eee;
+	}
+	> div {
+		border: 1px solid #ccc;
+		border-left: none;
+	}
+	> img {
+		float: left;
+		margin-right: 20px;
+	}
+	> div > h3 {
+		font-size: 16px;
+		font-weight: bold;
+		color :#000;
+		line-height: 31px;
+	}
+	> div > p {
+		font-size: $min-size;
+		color: #555;
+		line-height: 30px;
+		@extend %ellipsis;
+	}
+}
+.see-more {
+	float: right;
+	font-size: $min-size;
+	vertical-align: middle;
+	line-height: 20px;
+	color: #233;
+	@extend %underline-link;
+}
+
+.djs {
+	padding: 20px;
+	> h4 {
+		font-size: $min-size;
+		font-weight: bold;
+	}
+	> hr {
+		border:none;
+		border-top: 1px solid #ccc;
+	}
+	> ul {
+		margin-top: 20px;
+	}
+	> ul > li {
+		margin-bottom: 10px;
+	}
+	> ul > li > img {
+		float: left;
+		margin-right: 10px;
+	}
+}
+
+.dj-name {
+	font-size: $min-size;
+	display: block;
+	color: #000;
+	line-height: 20px;
+}
+.V {
+	@include background-img($icon-img, 0 1px, 11px, 13px);
+	position: absolute;
+	margin: -18px 0 0 75px;
+}
+.dj-intro {
+	font-size: $min-size;
+	color: #555;
 }
