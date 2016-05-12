@@ -12,3 +12,15 @@ ul {
 a:link, a:visited, a:hover, a:active {
 	text-decoration: none;
 }
+
+%ellipsis{
+	text-overflow:ellipsis; 
+	overflow:hidden; 
+	white-space:nowrap; 
+}
+
+%underline-link {
+	&:hover {
+		text-decoration: underline;
+	}
+}

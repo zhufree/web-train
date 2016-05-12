@@ -36,17 +36,6 @@ $index-img: url(http://s2.music.126.net/style/web2/img/index/index.png);
 $coverall-img: url(http://s2.music.126.net/style/web2/img/coverall.png);
 $sprite-img: url(http://s2.music.126.net/style/web2/img/sprite.png);
 
-%ellipsis{
-	text-overflow:ellipsis; 
-	overflow:hidden; 
-	white-space:nowrap; 
-}
-
-%underline-link {
-	&:hover {
-		text-decoration: underline;
-	}
-}
 body {
 	background-color: #f5f5f5;
 }
