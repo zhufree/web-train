@@ -46,9 +46,26 @@
 }
 
 //background img
-@mixin background-img($back-url, $back-pos, $width, $height) {
+@mixin background-img($back-url, $back-pos, $width:auto, $height:auto) {
     display: block;
     background: $back-url $back-pos no-repeat;
     height: $height;
     width: $width;
+}
+
+@mixin setText($font-size, $font-color, $text-align:left, $font-weight:normal) {
+    font-size: $font-size;
+    color: $font-color;
+    font-weight: $font-weight;
+    text-align: $text-align;
+}
+
+@mixin setBtn($width, $height, $back-color, $color, $font-size, $border-radius:0, $border:none) {
+    width: $width;
+    height: $height;
+    background-color: $back-color;
+    color: $color;
+    font-size: $font-size;
+    border: $border;
+    border-radius: $border-radius;
 }
