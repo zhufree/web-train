@@ -1,0 +1,26 @@
+//公共样式
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+}
+
+%ellipsis{
+	text-overflow:ellipsis; 
+	overflow:hidden; 
+	white-space:nowrap; 
+}
+
+%underline-link {
+	&:hover {
+		text-decoration: underline;
+	}
+}
