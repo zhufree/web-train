@@ -146,6 +146,9 @@ $list-color: #10ae58;
     border: 1px #fff solid;
     .cover {
         width: 100%;
+        > img {
+            display: block;
+        }
     }
     .pgrs-bar {
         height: 4px;

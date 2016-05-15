@@ -35,7 +35,7 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('html', function() {
-	gulp.src('html')
+	gulp.src('html/**/*.html')
 		.pipe(connect.reload());
 })
 
@@ -53,7 +53,7 @@ gulp.task('connect', function () {
 gulp.task('watch', function() {
 	gulp.watch('src/css/**/*.scss', ['styles']);
 	gulp.watch('src/js/*.js', ['scripts']);
-	gulp.watch('html', ['html']);
+	gulp.watch('html/*.html', ['html']);
 	// livereload.listen();
 	// gulp.watch(['dist/**']).on('change', livereload.changed);
 });
