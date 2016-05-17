@@ -1,0 +1,36 @@
+@import "public";
+@import "mixins";
+
+.dlg-cover {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(20%,20%,20%,.5);
+}
+
+.dlg-box {
+	position: absolute; 
+	top: 50%; 
+	left: 50%;
+	transform: translate(-50%, -50%); 
+	width: 600px;
+	height: 300px;
+	background-color: #f0fff0;
+	box-shadow: 0 0 1px 1px #555;
+	padding: 50px;
+	> .dlg-msg-content {
+		@include setText(25px, #233);
+		line-height: 40px;
+		border-top: #233 1px solid;
+	}
+	> .dlg-sure-btn {
+		position: absolute;
+		right: 50px;
+		bottom: 50px;
+		@include setBtn(100px, 40px, #91B493, #555, 18px);
+	}
+}

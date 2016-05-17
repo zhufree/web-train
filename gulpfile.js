@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     connect = require('gulp-connect');
 
 gulp.task('styles', function(){
-	del(['dist/css']);
+	// del(['dist/css']);
 	// gulp.src('src/css/**/*.scss')
 	gulp.src('src/css/*.scss')
 		.pipe(sass({outputStyle: 'expanded'})
@@ -24,7 +24,7 @@ gulp.task('styles', function(){
 });
 
 gulp.task('scripts', function () {
-	del(['dist/js']);
+	// del(['dist/js']);
     gulp.src('src/js/*.js')
         // .pipe(concat('main.js'))
         .pipe(gulp.dest('dist/js'))
@@ -50,7 +50,7 @@ gulp.task('connect', function () {
 	})
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', ['styles', 'scripts'], function() {
 	gulp.watch('src/css/**/*.scss', ['styles']);
 	gulp.watch('src/js/*.js', ['scripts']);
 	gulp.watch('html/*.html', ['html']);
@@ -58,4 +58,4 @@ gulp.task('watch', function() {
 	// gulp.watch(['dist/**']).on('change', livereload.changed);
 });
 
-gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['clean', 'connect', 'watch']);
