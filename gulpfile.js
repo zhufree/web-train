@@ -25,9 +25,8 @@ gulp.task('styles', function(){
 
 gulp.task('scripts', function () {
 	// del(['dist/js']);
-    gulp.src('src/js/*.js')
+    gulp.src('src/js/**/*.js')
         // .pipe(concat('main.js'))
-        .pipe(gulp.dest('dist/js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify().on('error', gulpUtil.log))
         .pipe(gulp.dest('dist/js'))
@@ -52,7 +51,7 @@ gulp.task('connect', function () {
 
 gulp.task('watch', ['styles', 'scripts'], function() {
 	gulp.watch('src/css/**/*.scss', ['styles']);
-	gulp.watch('src/js/*.js', ['scripts']);
+	gulp.watch('src/js/**/*.js', ['scripts']);
 	gulp.watch('html/*.html', ['html']);
 	// livereload.listen();
 	// gulp.watch(['dist/**']).on('change', livereload.changed);

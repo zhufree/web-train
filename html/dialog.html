@@ -9,21 +9,35 @@
 <link href="../dist/css/dialog.css" rel="stylesheet">
 </head>
 <body>
-<button id="create">create a dialog</button>
-    <!-- <div class="dlg-cover">
-    	<div class="dlg-box dlg-msg">
-    		<p class="dlg-msg-content">TEXT</p>
-    		<button class="dlg-sure-btn">Sure</button>
-    	</div>
-    </div> -->
-<!--     <div class="dlg-cover">
-    	<div class="dlg-box"></div>
-    </div>
-    <div class="dlg-cover">
-    	<div class="dlg-box"></div>
-    </div> -->
+<button class="create" id="create-sp">create a simple dialog</button>
+<button class="create" id="create-inp">create a input dialog</button>
+<button class="create" id="create-cpl">create a complete dialog->with a textarea given</button>
+<div class="container"></div>
+<script id='testDialog' type="text/template">
+<!-- 模板部分 -->
+<% if (hasMask) { %>
+	<div class="dlg-cover">
+<% } %>
+		<div class="dlg-box">
+		<% if (hasTitle) { %>
+			<h3 class="dlg-title"><%=title %></h3>
+		<% } %>
+		<% if (hasMsg) { %>
+			<p class="dlg-msg-content"><%=msgContent %></p>
+		<% } %>
+		<% if (hasInput) { %>
+			<input class="dlg-input" type="text" placeholder="<%=placeHolder %>"></input>
+		<% } %>
+		<% if (hasTemplate) { %>
+			<%:=template %>
+		<% } %>
+		<button class="dlg-sure-btn">Sure</button>
+		</div>
+<% if (hasMask) { %>
+ 	</div>
+<% } %>
+<!-- 模板结束 -->   
+</script>
 </body>
-<script src="http://cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-<script src="http://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
-<script src='../dist/js/dialog.js'></script>
+<script data-main="../dist/js/dialog.min.js" src="http://cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 </html>
