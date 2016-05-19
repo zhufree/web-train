@@ -40,10 +40,15 @@
 		line-height: 40px;
 		border-top: #233 1px solid;
 	}
-	> .dlg-sure-btn {
+	> button {
 		position: absolute;
-		right: 50px;
 		bottom: 50px;
 		@include setBtn(100px, 40px, #91B493, #555, 18px);
+	}
+	> .dlg-sure-btn {
+		right: 50px;
+	}
+	> .dlg-cancel-btn {
+		right: 200px;
 	}
 }

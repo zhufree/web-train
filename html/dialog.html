@@ -31,7 +31,10 @@
 		<% if (hasTemplate) { %>
 			<%:=template %>
 		<% } %>
-		<button class="dlg-sure-btn">Sure</button>
+		<% if (hasCancelBtn) { %>
+			<button class="dlg-cancel-btn">Cancel</button>
+		<% } %>
+			<button class="dlg-sure-btn">Sure</button>
 		</div>
 <% if (hasMask) { %>
  	</div>

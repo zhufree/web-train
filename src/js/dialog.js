@@ -18,7 +18,8 @@ function($) {
         hasInput: false,
         placeHolder: 'notice',
         hasTemplate: false,
-        template: ''
+        template: '',
+        hasCancelBtn: false
     };
 
     $(document).on('click', '.create', function(event) {
@@ -33,7 +34,8 @@ function($) {
                     title: 'inputDialogTitle',
                     hasMsg: false,
                     hasInput: true,
-                    placeHolder: 'inputPlaceHolder'
+                    placeHolder: 'inputPlaceHolder',
+                    hasCancelBtn: true
                 });
                 break;
             case 'create-cpl' :
@@ -41,7 +43,8 @@ function($) {
                     title: 'CompleteDialogTitle',
                     hasMsg: false,
                     hasTemplate: true,
-                    template: '<textarea></textarea>'
+                    template: '<textarea></textarea>',
+                    hasCancelBtn: true
                 });
                 break;
             default:
@@ -51,7 +54,7 @@ function($) {
         var dialogDom = bt('testDialog', fnDialog);
         $(fnDialog.context)[0].innerHTML = dialogDom;
     })
-    .on('click', '.dlg-sure-btn', function(event) {
+    .on('click', '.dlg-sure-btn, .dlg-cancel-btn', function(event) {
         thisDialog = $(event.target).closest('.dlg-cover') || $(event.target).closest('.dlg-box');
         thisDialog.remove();
     });
