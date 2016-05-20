@@ -18,7 +18,7 @@
 	left: 50%;
 	transform: translate(-50%, -50%); 
 	width: 600px;
-	height: 300px;
+	min-height: 300px;
 	background-color: #f0fff0;
 	box-shadow: 0 0 1px 1px #555;
 	padding: 40px;
@@ -41,14 +41,12 @@
 		border-top: #233 1px solid;
 	}
 	> button {
-		position: absolute;
-		bottom: 50px;
+		float: right;
+		margin: 20px 0 0 20px;
 		@include setBtn(100px, 40px, #91B493, #555, 18px);
 	}
 	> .dlg-sure-btn {
-		right: 50px;
 	}
 	> .dlg-cancel-btn {
-		right: 200px;
 	}
 }

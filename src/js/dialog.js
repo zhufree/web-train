@@ -19,7 +19,8 @@ function($) {
         placeHolder: 'notice',
         hasTemplate: false,
         template: '',
-        hasCancelBtn: false
+        hasCancelBtn: false,
+        isLoginDialog: false
     };
 
     $(document).on('click', '.create', function(event) {
@@ -47,6 +48,12 @@ function($) {
                     hasCancelBtn: true
                 });
                 break;
+            case 'create-login' :
+                $.extend(true, fnDialog, dftDialog, {
+                    title: 'LoginDialog',
+                    hasMsg: false,
+                    isLoginDialog: true
+                })
             default:
                 break;
         }
