@@ -71,4 +71,4 @@ gulp.task('watch', ['styles', 'scripts'], function() {
     // gulp.watch(['dist/**']).on('change', livereload.changed);
 });
 
-gulp.task('default', ['clean', 'connect', 'watch']);
+gulp.task('default', ['connect', 'watch']);
