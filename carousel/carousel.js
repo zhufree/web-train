@@ -20,8 +20,8 @@ function( $ ) {
 
     var it;
 
-    function nextOne(isDirect, direction) {
-        if (isDirect) {
+    function autoShow(time) { //auto change img
+        return setInterval(function() {
             $('.prev').removeClass('prev');
             $('.active').removeClass('active').addClass('prev');
             $next = $('.next');
@@ -31,7 +31,11 @@ function( $ ) {
             } else {
                 $next.siblings().first().addClass('next');
             }
-        } else {
+        }, time);
+    }
+
+    function autoMove(time, direction) { //auto move img
+        return setInterval(function() {
             $('.prev').removeClass('prev');
             var actParams = direction === 'horizontal' ? {left: '-100%'} : {top : '-100%'};
             var nextParams = direction === 'horizontal' ? {left: 0} : {top : 0};
@@ -48,17 +52,6 @@ function( $ ) {
                         $this.siblings().first().css(params).addClass('next');
                 }
             });
-        }
-    }
-    function autoShow(time) { //auto change img
-        return setInterval(function() {
-            nextOne(true);
-        }, time);
-    }
-
-    function autoMove(time, direction) { //auto move img
-        return setInterval(function() {
-            nextOne(false, direction);
         }, time);
     }
     
@@ -96,23 +89,14 @@ function( $ ) {
         /* Act on the event */
         clearInterval(it);
         itemId = $(event.target).attr('href');
-        $targetImg = $('.cp-carousel-img' + itemId);
-        $targetImg.addClass('active').siblings().removeClass('active prev next');
-        $targetImg.next().length > 0 ?
-            $targetImg.next().addClass('next'):
-            $targetImg.siblings().first().addClass('next');
-
-        $targetImg.prev().length > 0 ?
-            $targetImg.prev().addClass('prev') :
-            $targetImg.siblings().last().addClass('prev');
+        $('.cp-carousel-img' + itemId).addClass('active').siblings().removeClass('active');
         it = autoShow(3000);
     })
     .on('click', '.slide-carousel .cp-carousel-dot', function(event) {
         event.preventDefault();
         /* Act on the event */
-        var direction = $(event.target).parents('.slide-horizontal').length > 0 ? 'horizontal' : 'vertical';
         function setDirection() {
-            return direction === 'horizontal' ?
+            return $(event.target).parents('.slide-horizontal').length > 0 ?
                 function(param) { return {left: param};} :
                 function(param) { return {top: param};};
         }
@@ -145,6 +129,6 @@ function( $ ) {
         $targetImg.prev().length > 0 ?
             $targetImg.prev().css(setParam('-100%')).addClass('prev') :
             $targetImg.siblings().last().css(setParam('-100%')).addClass('prev');
-        it = autoMove(3000, direction);
+        it = autoMove(3000);
     });
 });
