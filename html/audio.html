@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>audio</title>
+    <link rel="stylesheet" href="../dist/css/free.min.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="container">
+        <div class="back-img"></div>
+        <audio src="../dist/media/the dawn.mp3" id="audio"></audio>
+        <div class="audio-container">
+            <div class="controls">
+                <div class="controls_plays">
+                    <svg id="prev_btn" viewBox="0 0 24.5 23.6">
+                        <polygon points="0,11.8 13.5,0 13.5,10.7 24.5,0 24.5,23.6 13.5,12.9 13.5,23.6 "/>
+                    </svg>
+
+                    <svg id="plays_btn" viewBox="0 0 24.5 30.9">
+                        <g id="play_btn">
+                            <path d="M0,30.9L0,0l24.5,15.4L0,30.9z"/>
+                        </g>
+                        <g id="pause_btn">
+                            <rect x="0" y="0" width="8.2" height="30.9"/>
+                            <rect x="16.2" y="0" width="8.2" height="30.9"/>
+                        </g>
+                    </svg>
+
+                    <svg id="next_btn" viewBox="0 0 24.5 23.6">
+                        <polygon points="25,11.8 11.5,0 11.5,10.7 0.5,0 0.5,23.6 11.5,12.9 11.5,23.6 "/>
+                    </svg>
+
+                </div>
+            </div>
+
+            <!--<div class="audio-player">-->
+                <!--<button id="play-btn"></button>-->
+                <!--<button id="pause-btn"></button>-->
+                <!--<div class="vol-controller"></div>-->
+            <!--</div>-->
+            <div class="audio-timeline">
+                <p id="timeleft">00:00</p>
+                <div class="progressbar_slide">
+                    <div class="progressbar_range">
+                      <div class="slide-bar"  draggable="true">
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tag-box">
+
+            </div>
+            <div class="comment-input col-md-6 col-md-offset-3">
+                <textarea id="comment" name="comment" rows="8" cols="40"></textarea>
+                <button class="btn btn-primary" type="submit" name="button">Submit</button>
+            </div>
+        </div>
+    </div>
+  </body>
+  <script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../src/js/free.js"></script>
+
+</html>

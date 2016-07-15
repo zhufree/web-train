@@ -9,14 +9,26 @@ var gulp = require('gulp'),
     del = require('del'),
     livereload = require('gulp-livereload'),
     connect = require('gulp-connect'),
-    jade = require('gulp-jade');
+    less = require('gulp-less');
+    // jade = require('gulp-jade');
 
+// gulp.task('styles', function(){
+//     // del(['dist/css']);
+//     // gulp.src('src/css/**/*.scss')
+//     gulp.src('src/css/*.scss')
+//         .pipe(sass({outputStyle: 'expanded'})
+//             .on('error', sass.logError))
+//         .pipe(gulp.dest('dist/css'))
+//         .pipe(rename({suffix: '.min'}))
+//         .pipe(cleancss())
+//         .pipe(gulp.dest('dist/css'))
+//         .pipe(connect.reload());
+// });
 gulp.task('styles', function(){
     // del(['dist/css']);
     // gulp.src('src/css/**/*.scss')
-    gulp.src('src/css/*.scss')
-        .pipe(sass({outputStyle: 'expanded'})
-            .on('error', sass.logError))
+    gulp.src('src/css/*.less')
+        .pipe(less())
         .pipe(gulp.dest('dist/css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(cleancss())
@@ -44,12 +56,12 @@ gulp.task('html', function() {
         .pipe(connect.reload());
 });
 
-gulp.task('jade', function() {
-    gulp.src('src/html/*.jade')
-        .pipe(jade({pretty: true}))
-        .pipe(gulp.dest('html'))
-        .pipe(connect.reload());
-})
+// gulp.task('jade', function() {
+//     gulp.src('src/html/*.jade')
+//         .pipe(jade({pretty: true}))
+//         .pipe(gulp.dest('html'))
+//         .pipe(connect.reload());
+// });
 
 gulp.task('clean', function(cb) {
     del(['dist/css', 'dist/js'], cb);
@@ -62,13 +74,14 @@ gulp.task('connect', function () {
     })
 });
 
-gulp.task('watch', ['styles', 'scripts'], function() {
-    gulp.watch('src/css/**/*.scss', ['styles']);
+gulp.task('watch', ['styles'], function() {
+    gulp.watch('src/css/*.less', ['styles']);
     gulp.watch('src/js/**/*.js', ['scripts']);
     gulp.watch('html/**/*.html', ['html']);
     // gulp.watch('src/html/*.jade', ['html']);
-    // livereload.listen();
-    // gulp.watch(['dist/**']).on('change', livereload.changed);
+    livereload.listen();
+    gulp.watch(['dist/**']).on('change', livereload.changed);
+    gulp.watch(['html/**']).on('change', livereload.changed);
 });
 
 gulp.task('default', ['connect', 'watch']);
