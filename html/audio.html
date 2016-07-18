@@ -8,7 +8,10 @@
   <body>
     <div class="container">
         <div class="back-img"></div>
-        <audio src="../dist/media/the dawn.mp3" id="audio"></audio>
+        <audio id="audio" preload>
+          <source src="../dist/media/thedawn.mp3" type="audio/mpeg">
+          <!-- <source src="../dist/media/thedawn.ogg" type="audio/ogg"> -->
+        </audio>
         <div class="audio-container">
             <div class="controls">
                 <div class="controls_plays">
@@ -46,6 +49,7 @@
                       </div>
                     </div>
                 </div>
+                <div class="progressbar_cover"></div>
             </div>
             <div class="tag-box">
 
@@ -59,5 +63,4 @@
   </body>
   <script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="../src/js/free.js"></script>
-
 </html>

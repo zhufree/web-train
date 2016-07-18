@@ -4,6 +4,11 @@
 
 $(function(){
   var audio = document.getElementById('audio');
+  // audio.oncanplay = function() {
+  //   alert(audio.duration);
+  //   duration = audio.duration;
+  //   showTags();
+  // };
   var isPlaying = false;
   var $leftRange = $('.progressbar_range'),
     $timeline = $('.progressbar_slide'),
@@ -53,9 +58,7 @@ $(function(){
   var $danmuBox = $('.back-img'),
     $tagBox = $('.tag-box');
 
-  var duration;
-
-  var dmInter;
+  var dmInter, duration;
   $("#plays_btn").click(function() {
     if (audio.paused == false) {
       audio.pause();
@@ -71,8 +74,19 @@ $(function(){
       }, 1000);
       $("#play_btn").hide();
       $("#pause_btn").show();
-      }
-    });
+    }
+  });
+
+  // 显示标签
+  // 火狐
+  audio.oncanplay = showTags();
+  // 其他
+  audio.addEventListener("canplaythrough", function () {
+  	duration = audio.duration;
+    // alert(duration);
+    showTags();
+  }, false);
+
 
   // 播放位置发生改变时，改变左侧长度
   audio.addEventListener("timeupdate", function() {
@@ -107,11 +121,6 @@ $(function(){
     $('#timeleft').text("-"+m+":"+s);
   });
 
-  audio.addEventListener('canplay', function() {
-    duration = audio.duration;
-    showTags();
-  });
-
   // 时间线进度轴功能
   //拖放功能
   $slideBar[0].ondragstart = function(event) {
@@ -141,7 +150,7 @@ $(function(){
     stopPos = event.screenX - (screen.width - totalLen) / 2;
     //获取鼠标横坐标减去时间轴左边空白即滑动轴所在位置距离时间轴左边的距离
     var lenRadio = stopPos / totalLen; //计算出百分比
-    currentTime = duration * lenRadio; // 调整播放位置
+    audio.currentTime = audio.duration * lenRadio; // 调整播放位置
     $leftRange.css({
      'width': lenRadio * 100 + '%', // 调整滑动轴位置和颜色
     });
@@ -172,7 +181,10 @@ $(function(){
     }
   }
 
+  // function showTags (duration) {
   function showTags () {
+    duration = audio.duration;
+    // console.log(duration);
     for (tag in tags) {
       var tagColor = poleColor[parseInt(Math.random()*6.5)];
       $('<div>').attr('class', 'tag-pole')
