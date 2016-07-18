@@ -20,7 +20,7 @@
 
 .danmu {
   // background-color: transparent;
-  color: orange;
+  // color: orange;
   position: absolute;
   right: 0;
 }
@@ -86,6 +86,7 @@ audio {
   width: 100%;
   background-color: @base-clr;
   height: 120px;
+  position: relative;
 }
 
 .progressbar_range {
@@ -105,7 +106,21 @@ audio {
   cursor: move;
 }
 
-.comment-input {
+.tag-box {
+  height: 100px;
+  width: 100%;
+  position: relative;
+}
+.tag-pole {
+  height: 100%;
+  width: 2px;
+  position: absolute;
+}
+.tag-label {
+  position: absolute;
+
+}
+.danmu-input {
   textarea {
     width: 100%;
     border-radius: 10px;
