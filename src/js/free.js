@@ -14,6 +14,7 @@ $(function(){
     $timeline = $('.progressbar_slide'),
     $slideBar = $('.slide-bar');
   var totalLen = parseInt($timeline.width()); //时间轴总长度
+  $('.progressbar_range > img').width(totalLen);
 
   // 准备弹幕数据
   var danmu = {
