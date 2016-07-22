@@ -4,15 +4,14 @@
 
 $(function(){
   var audio = document.getElementById('audio');
-  // audio.oncanplay = function() {
-  //   alert(audio.duration);
-  //   duration = audio.duration;
-  //   showTags();
-  // };
   var isPlaying = false;
+  var ajaxInter, showInter, duration, inTime = 0;
   var $leftRange = $('.progressbar_range'),
     $timeline = $('.progressbar_slide'),
     $slideBar = $('.slide-bar');
+  var $danmuBox = $('.back-img'),
+    $tagBox = $('.tag-box');
+
   var totalLen = parseInt($timeline.width()); //时间轴总长度
   $('.progressbar_range > img').width(totalLen);
 
@@ -56,22 +55,22 @@ $(function(){
     '#563F2E', //KOGECHA
 
   ]
-  var $danmuBox = $('.back-img'),
-    $tagBox = $('.tag-box');
 
-  var dmInter, duration;
   $("#plays_btn").click(function() {
     if (audio.paused == false) {
       audio.pause();
-      clearInterval(dmInter);
+      clearInterval(ajaxInter);
       isPlaying = false;
       $("#play_btn").show();
       $("#pause_btn").hide();
     } else {
       audio.play();
       isPlaying = true;
-      dmInter = setInterval(function() {
-        showDanmu();
+
+      showInter = setInterval(function() {
+        var curTime = parseInt(audio.currentTime);
+        getDanmu(curTime);
+        showDanmu(curTime);
       }, 1000);
       $("#play_btn").hide();
       $("#pause_btn").show();
@@ -80,11 +79,10 @@ $(function(){
 
   // 显示标签
   // 火狐
-  audio.oncanplay = showTags();
+  audio.onloadeddata = showTags();
   // 其他
-  audio.addEventListener("canplaythrough", function () {
+  audio.addEventListener("loadedmetadata", function () {
   	duration = audio.duration;
-    // alert(duration);
     showTags();
   }, false);
 
@@ -94,19 +92,17 @@ $(function(){
     var currentTime = audio.currentTime,
       duration = audio.duration;
 
+    // 改变左侧长度
     var progresslen = (currentTime + .25) / duration * 100 * totalLen;
     $leftRange.stop(true, true).animate({'width': (currentTime + .25) / duration * 100 + '%'}, 250, 'linear');
     $slideBar.css('left', '100%');
     if (audio.ended) {
       $("#play_btn").show();
       $("#pause_btn").hide();
+      clearInterval(showInter);
     }
-  });
-  // 改变数值显示
-  audio.addEventListener("timeupdate", function() {
-    var currentTime = audio.currentTime,
-      duration = audio.duration;
 
+    // 改变数值显示
     var timeleft = document.getElementById('timeleft'),
       duration = parseInt( duration ),
       currentTime = parseInt( currentTime ),
@@ -162,9 +158,42 @@ $(function(){
     return false;
   }
 
-  function showDanmu() {
-    var curTime = parseInt(audio.currentTime);//获取当前时间,这里是变值
-      danAtCur = danmu[curTime]; //获取当前弹幕
+  function getDanmu(curTime) {
+    if (curTime - inTime >= 60) {
+      // getdata
+      inTime = curTime;
+      console.log('getDanmu at ' + curTime);
+      // $.post('url', {
+      //   time: curTime
+      // }, function(data) {
+      //   data = JSON.parse(data);
+      //   for (key in data){
+      //     danmu[key] = data[key];
+      //   }
+      // });
+
+      var testData = {
+        '60': ['01', '02', '03'],
+        '61': ['11', '12', '13'],
+        '63': ['31', '32', '33'],
+        '64': ['41', '42', '43'],
+        '66': ['61', '62', '63'],
+        '67': ['01', '02', '03'],
+        '70': ['01', '02', '03'],
+        '74': ['01', '02', '03'],
+        '77': ['01', '02', '03'],
+        '79': ['01', '02', '03'],
+        '80': ['01', '02', '03'],
+        '90': ['01', '02', '03']
+      };
+      for (key in testData){
+        danmu[key] =testData[key];
+      }
+    }
+  }
+
+  function showDanmu(curTime) {
+    var danAtCur = danmu[curTime]; //获取当前弹幕
     if (danAtCur) {
       for ( danmuNum in danAtCur ) {
         $('<span>').text(danAtCur[danmuNum]).attr('class', 'danmu')
@@ -182,10 +211,8 @@ $(function(){
     }
   }
 
-  // function showTags (duration) {
   function showTags () {
     duration = audio.duration;
-    // console.log(duration);
     for (tag in tags) {
       var tagColor = poleColor[parseInt(Math.random()*6.5)];
       $('<div>').attr('class', 'tag-pole')
@@ -215,19 +242,24 @@ $(function(){
     var danAtCur = danmu[curTime]; //获取当前弹幕
     var danmuNum = danAtCur ? danAtCur.length : 0;
     // 发送到后台。。。
-
-    // 直接显示
-    $('<span>').text(dmContent).attr('class', 'danmu')
-      .css({
-        'top': (parseInt(danmuNum)+1) * 18 + 'px'
-      })
-      .delay(parseInt(danmuNum)*100)
-      .animate({
-        right: '100%'
-      }, 10000, 'linear', function(){
-        $(this).remove();
-      })
-      .appendTo($danmuBox);
+    $.post('url', {
+      time: curTime,
+      content: dmContent
+    }, function() {
+      // 直接显示
+      $('<span>').text(dmContent).attr('class', 'danmu')
+        .css({
+          'top': (parseInt(danmuNum)+1) * 18 + 'px'
+        })
+        .delay(parseInt(danmuNum)*100)
+        .animate({
+          right: '100%'
+        }, 10000, 'linear', function(){
+          $(this).remove();
+        })
+        .appendTo($danmuBox);
+    });
   });
+
 
 });

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Storage</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    if (localStorage.visited) {
+      localStorage.visited ++;
+    } else {
+      localStorage.visited = 1;
+    }
+    document.write('localStorage.visited = ' + localStorage.visited);
+    if (sessionStorage.visited) {
+      sessionStorage.visited ++;
+    } else {
+      sessionStorage.visited = 1;
+    }
+    document.write('sessionStorage.visited = ' + sessionStorage.visited);
+  </script>
+</html>
